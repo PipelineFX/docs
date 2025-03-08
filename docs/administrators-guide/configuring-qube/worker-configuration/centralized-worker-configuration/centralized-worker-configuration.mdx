@@ -1,0 +1,72 @@
+---
+slug: /centralized-worker-configuration
+---
+
+# Centralized Worker Configuration
+
+You can create a central configuration for all Workers in two ways: via the
+QubeUI from the supervisor host, or by manually editing the qbwrk.conf file on
+the supervisor host. This page discusses both methods.
+
+## Configuration file name and location
+The central worker configuration file is optional and may not yet exist on your
+supervisor.  The default name and location is:
+
+| OS             | Path                               |
+|----------------|------------------------------------|
+| Linux & macOS: | /etc/qbwrk.conf                    |
+| Windows:       | C:\ProgramData\pfx\qube\qbwrk.conf |
+
+An alternate name and/or location can be specified with the
+[supervisor_worker_configfile](/Documentation/administrators-guide/configuration-parameter-reference/supervisor_worker_configfile)
+parameter in the supervisor's qb.conf file.  
+
+## Configuring via the QubeUI
+The central Worker configuration can be managed through the QubeUI from the
+Supervisor. Using the Workers tab, select one or more machines, \<right-click\>
+to get the menu, and choose "Configure on Supervisor"
+
+:::warning
+This menu item is only enabled when:
+* running the QubeUI on the supervisor host
+* the user has the Qube! 'admin' privilege
+:::
+
+The worker configuration UI will be shown.  Make any desired changes. Any
+values that you edit will have their labels turn green, as in the
+worker_description field to the right.
+
+Clicking OK will save the changes to the central worker configuration, at which
+time the Supervisor will automatically instruct all workers to re-request their
+configuration from the Supervisor.  No Supervisor or Worker restart is
+necessary.  Any Workers not currently running will receive the changes when
+they next start up.
+
+## Configuring Manually
+An administrator can also edit the qbwrk.conf file manually. Here are the steps:
+
+**Create** the qbwrk.conf file if it doesn't already exist, on the Supervisor
+machine in the correct location:
+
+**Edit** the qbwrk.conf file with a text editor using the file format described
+on this page.
+
+**Validate** the qbwrk.conf file using the qbconfigure command. More details on
+this page.
+```
+$ qbconfigfile <qbwrk file location>
+```
+
+**Push** the settings to the Workers using the qbadmin command
+```
+$ qbadmin worker --reconfigure
+```
+
+:::warning
+It may take a few minutes to perform this action if the farm is large.
+:::
+
+See Also
+* qbwrk.conf File Format
+* Validating the qbwrk.conf File
+* [supervisor_worker_configfile](/Documentation/administrators-guide/configuration-parameter-reference/supervisor_worker_configfile)

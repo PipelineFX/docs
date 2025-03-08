@@ -1,0 +1,296 @@
+---
+slug: c++-api-reference
+---
+
+# C++ API Reference
+
+* [API Functions](./API+Functions)
+
+## class QbCallbackList
+
+|  |  |
+---|---  
+**Description**|  Class for a list of QbCallback objects.  
+  
+  
+### Instance Methods  
+
+#### QbCallbackList::type
+
+|  |  |
+---|---
+**Purpose**|  Returns the list type ID.
+**Prototype**|  virtual QB_INT type()
+**Parameters**|  None
+**Result**|  QB_CALLBACKLIST_PACKID
+  
+## class QbCommand
+
+|  |  |
+---|---  
+**Description**|  Class for storing job query information.  
+  
+  
+### Constants
+
+|  |  |
+---|---  
+**QB_COMMAND_FILTERLIST**|  1  
+**QB_COMMAND_JOBIDLIST**|  2  
+**QB_COMMAND_WORKIDLIST**|  3  
+**QB_COMMAND_GROUPLIST**|  4  
+**QB_COMMAND_RESTRICTIONS**|  5  
+  
+  
+### Instance Methods  
+
+#### QbCommand::type
+
+|  |  |
+---|---
+**Purpose**|  Return type ID of a QbCommand object.
+**Prototype**|  virtual QB_INT type()
+**Parameters**|  None
+**Result**|  QB_COMMAND_PACKID
+  
+  
+#### QbCommand::encode
+
+|  |  |
+---|---
+**Purpose**|  Convert internal data into transmittable binary format
+**Prototype**|  QB_VOID QbCommand::encode()
+**Parameters**|  None
+**Result**|  None
+  
+  
+#### QbCommand::decode
+
+|  |  |
+---|---
+**Purpose**|  Converts internal data from transmittable binary format.
+**Prototype**|  QB_VOID QbCommand::decode()
+**Parameters**|  None
+**Result**|  None
+  
+  
+#### QbCommand::copy
+
+|  |   |   |
+---|---|---
+**Purpose**|  Copy the contents of a QbCommand object into this object.
+**Prototype**|  QB_VOID QbCommand::copy(const QbCommand& ref)
+**Parameters**|  ref | Pointer to source QbCommand object
+**Result**|  None
+  
+  
+#### QbCommand::operator=
+
+|  |   |  |
+---|---|---
+**Purpose**|  Overload '=' operator to duplicate QbCommand objects
+**Prototype**|  QbCommand& QbCommand::operator=(const QbCommand& ref)
+**Parameters**|  ref | Pointer to source QbCommand object
+**Result**|  Pointer to this object
+  
+  
+#### QbCommand::groups
+
+|  |  |
+---|---
+**Purpose**|  Accessor function to retrieve a host groups list
+**Prototype**|  QbStringList& QbCommand::groups()
+**Parameters**|  None
+**Result**|  Pointer to list of strings containing host group names
+  
+  
+#### QbCommand::filters
+
+|  |  |
+---|---
+**Purpose**|  Accessor function to return a filter list object.
+**Prototype**|  QbFilterList& QbCommand::filters()
+**Parameters**|  None
+**Result**|  Pointer to a list of QbFilter objects.
+  
+  
+#### QbCommand::jobids
+
+|  |  |
+---|---
+**Purpose**|  Accessor function to return a job ID list object
+**Prototype**|  QbJobIdList& QbCommand::jobids()
+**Parameters**|  None
+**Result**|  Pointer to list of QbJobId objects.
+  
+  
+#### QbCommand::workids
+
+|  |  |
+---|---
+**Purpose**|  Accessor function to return work ID list object
+**Prototype**|  QbWorkIdList& QbCommand::workids()
+**Parameters**|  None
+**Result**|  Pointer to list of QbWorkId objects.
+  
+  
+#### QbCommand::restrictions
+
+|  |  |
+---|---
+**Purpose**|  Accessor function to set and retrieve restrictions.
+**Prototype**|  QB_BOOL QbCommand::restrictions()QB_VOID QbCommand::restrictions(QB_BOOL val)
+**Parameters**|  val (Restrictions)
+**Result**
+  
+## class QbHistoryList
+
+|  |  |
+---|---  
+**Description**|  Class for a list of QbHistory objects
+  
+  
+### Instance Methods
+
+#### QbHistoryList::type
+
+|  |  |
+---|---
+**Purpose**|  Returns the list type ID
+**Prototype**|  virtual QB_INT type()
+**Parameters**|  None
+**Result**|  QB_HISTORYLIST_PACKID
+  
+  
+## class QbJobList
+
+|  |  |
+---|---  
+**Description**|  Class for a list of QbJobs  
+  
+  
+### Instance Methods
+
+#### QbJobList::exists
+
+|  |   |  |
+---|---|---
+**Purpose**|  Determines if a particular job ID has a corresponding QbJob in the list
+**Prototype**|  QB_BOOL QbJobList::exists(QB_INT jobid)
+**Parameters**|  jobid | The job's ID number
+**Result**|  QB_TRUE if the job is in the listQB_FALSE otherwise
+  
+  
+#### QbJobList::type
+
+|  |  |
+---|---
+**Purpose**|  Returns the list type ID
+**Prototype**|  virtual QB_INT type()
+**Parameters**|  None
+**Result**|  QB_JOBLIST_PACKID
+  
+## class QbLogList
+
+|  |  |
+---|---  
+**Description**|  Class for a list of QbLog objects.  
+  
+  
+### Instance Methods
+
+#### QbLogList::type
+
+|  |  |
+---|---
+**Purpose**|  Returns the list type ID
+**Prototype**|  virtual QB_INT type()
+**Parameters**|  None
+**Result**|  QB_LOGLIST_PACKID
+  
+## class QbQuery
+
+|  |  |
+---|---  
+**Description**|  Class for containing query filters and fields.  
+  
+  
+### Constants
+
+|  |  |
+---|---  
+**QB_QUERY_FILTERLIST**|  1  
+**QB_QUERY_FIELDSLIST**|  2  
+  
+  
+### Instance Methods
+
+#### QbQuery::type
+
+|  |  |
+---|---
+**Purpose**|  Returns the type ID of a QbQuery object
+**Prototype**|  virtual QB_INT type()
+**Parameters**|  None
+**Result**|  QB_QUERY_PACKID
+  
+  
+#### QbQuery::encode
+
+|  |  |
+---|---
+**Purpose**|  Convert internal data to transmittable binary format
+**Prototype**|  QB_VOID QbQuery::encode()
+**Parameters**|  None
+**Result**|  None
+  
+  
+#### QbQuery::decode
+
+|  |  |
+---|---
+**Purpose**|  Convert internal data from transmittable binary format
+**Prototype**|  QB_VOID QbQuery::decode()
+**Parameters**|  None
+**Result**|  None
+  
+  
+#### QbQuery::copy
+
+|  |   |  |
+---|---|---
+**Purpose**|  Copies the contents of a QbQuery object to this object
+**Prototype**|  QB_VOID QbQuery::copy(const QbQuery& ref)
+**Parameters**|  ref | Pointer to source QbQuery object
+**Result**|  None
+  
+  
+#### QbQuery::operator =
+
+|  |   |  |
+---|---|---
+**Purpose**|  Overloads '=' operator to duplicate QbQuery objects
+**Prototype**|  QbQuery& QbQuery::operator=(const QbQuery& ref)
+**Parameters**|  ref | Pointer to source QbQuery object
+**Result**|  Returns pointer to this object
+  
+  
+#### QbQuery::filters
+
+|  |  |
+---|---
+**Purpose**|  Accessor function to retrieve query fields
+**Prototype**|  QbFilterList& QbQuery::filters()
+**Parameters**|  None
+**Result**|  Pointer to a list of query filters
+  
+  
+#### QbQuery::fields
+
+|  |  |
+---|---
+**Purpose**|  Accessor function to retrieve query fields
+**Prototype**|  QbFieldList& QbQuery::fields()
+**Parameters**|  None
+**Result**|  Pointer to a list of query fields
+  

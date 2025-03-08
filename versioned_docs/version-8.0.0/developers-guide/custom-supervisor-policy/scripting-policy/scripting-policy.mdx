@@ -1,0 +1,32 @@
+---
+slug: /scripting-policy
+---
+
+# Scripting policy
+#
+Custom Policy implementation is done using a script file plug-in written in Perl.
+
+The following qb.conf parameters must be set appropriately:
+
+```
+supervisor_policy_binding = Perl
+supervisor_policy_library = path_to_script
+```
+
+To create a new custom supervisor policy, the developer must create a Perl module with the following Perl subroutines:
+
+1. qb_approve_modify($oldjob, $newjob, $user)
+2. qb_approve_submit($job)
+3. qb_calcstatus($subjobstatus, $agendastatus)
+4. qb_init()
+5. qb_sudo_admin($username, $job)
+
+A function, if not defined, will automatically be overridden with the "Default Policy".
+
+Here are details on each subroutine.
+
+* [qb_approve_modify](developers-guide/custom-supervisor-policy/scripting-policy/qb_approve_modify)
+* [qb_approve_submit](developers-guide/custom-supervisor-policy/scripting-policy/qb_approve_submit)
+* [qb_calc_status](developers-guide/custom-supervisor-policy/scripting-policy/qb_calc_status)
+* [qb_init](developers-guide/custom-supervisor-policy/scripting-policy/qb_init)
+* [qb_sudo_admin](developers-guide/custom-supervisor-policy/scripting-policy/qb_sudo_admin)

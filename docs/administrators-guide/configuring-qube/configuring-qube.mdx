@@ -1,0 +1,47 @@
+---
+slug: /configuring-qube
+---
+
+# Configuring Qube!
+
+## Contents
+- Clustering and Job Priority
+- Supervisor Configuration
+- SmartShare
+- Worker Configuration
+- Client Configuration
+- Permissions
+- Auto-Wrangling
+- Job Preemption
+- Log Files
+- Per-User and Per-Pgrp Instance Limits
+- System-Wide Resource Tracking
+- Flight-Checks (Pre and Post)
+- Universal Callbacks
+- Queuing Algorithms
+- Lights Out Management (LOM)
+- Shotgun Integration
+
+## Configuration Files
+The Qube! configuration files allow you to specify the settings for the Qube! Supervisor, Workers, and Clients. These files are located in the following directories depending on the platform:
+
+| OS              | Path                    |
+| ----------------|-------------------------|
+| Linux & macOS : | /etc                    |
+| Windows 10/11:  | C:\ProgramData\pfx\qube |
+
+**qb.conf** (Supervisor, Worker, Client)
+The installer programs place a template qb.conf in a suitable location, depending upon the platform. Examination of this file will reveal that almost every entry is commented out with a "#" character. The commented-out settings refer to defaults that are already configured into the system. To make changes simply duplicate the line, removing the comment character, and make the changes. Commenting or deleting the line will restore the default setting.
+
+**qb.lic** (Supervisor only)
+The qb.lic file must contain a license key string issued by PipelineFX. Additional key strings can be added to the file in no particular order. Whenever adding a new key to the file, always back it up to a safe location, just in case there is a problem.
+
+**qbwrk.conf** (Supervisor only)
+The qbwrk.conf file is an optional file on the Supervisor that centrally configures all of the Qube! Workers under the Supervisor. See the section on "Centrally Configuring Workers" for more information.
+
+Configuration Dialog
+The Configuration dialog, launched from the QubeUI\'s "Administration->Configure (local)", allows one to configure the local machine for Qube! It exposes all of the options that the standalone Configuration GUI exposed and more. For centralized Worker configuration, see the Host Layout\'s popup menu item "Configure" when logged into the Supervisor.
+
+:::tip
+See the Configuration Parameters section for further information on the settable fields.
+:::

@@ -1,0 +1,160 @@
+---
+slug: /configuration-parameter-reference
+---
+
+# Configuration Parameter Reference
+
+This page provides documentation for all of Qube!'s configuration parameters.
+
+## Local Configuration
+The Configuration for the Supervisor, Worker, and Clients can be found in the
+qb.conf file that is located at the following locations depending on the
+platform. It can be configured directly with a text editor or through the
+QubeUI's [Administration Panel](/Documentation/users-guide/qube-ui/panels/Administration+Panel). 
+
+| OS                  | Path                            |
+| --------------------|---------------------------------|
+| **Linux & macOS:**  | /etc/qb.conf                    |
+| **Windows 10/11:**  | C:\ProgramData\pfx\qube\qb.conf |
+
+## Central Worker Configuration
+On the Supervisor, there is an additional optional configuration file
+qbwrk.conf for centrally modifying the Worker configurations. It can be
+modified directly with a text editor or through the WranglerView's Host/Worker
+Layout right-click menu item "Configure On Supervisor..." for the selected Workers.
+
+## Configuration Parameters by type
+* [Parameters common to Supervisor, Workers, and Clients](configuration-parameter-reference#parameters-common-to-supervisor-workers-and-clients)
+* [Supervisor Parameters](configuration-parameter-reference#supervisor-parameters)
+* [Worker Parameters](configuration-parameter-reference#worker-parameters)
+* [Client Parameters](configuration-parameter-reference#client-parameters)
+
+## Parameters common to Supervisor, Workers, and Clients
+* [qb_directory](./administrators-guide/configuration-parameter-reference/qb_directory)
+* [qb_domain](./administrators-guide/configuration-parameter-reference/qb_domain)
+* [qb_supervisor](./administrators-guide/configuration-parameter-reference/qb_supervisor)
+
+## Supervisor Parameters
+* [aw_activation_work_count](./administrators-guide/configuration-parameter-reference/aw_activation_work_count)
+* [aw_job_migrate_max](./administrators-guide/configuration-parameter-reference/aw_job_migrate_max)
+<br />
+* [database_host](./administrators-guide/configuration-parameter-reference/database_host)
+* [database_password](./administrators-guide/configuration-parameter-reference/database_password)
+* [database_port](./administrators-guide/configuration-parameter-reference/database_port)
+* [database_user](./administrators-guide/configuration-parameter-reference/database_user)
+<br />
+* [mail_administrator](./administrators-guide/configuration-parameter-reference/mail_administrator)
+* [mail_administrator](./administrators-guide/configuration-parameter-reference/mail_administrator)
+* [mail_connection_type](./administrators-guide/configuration-parameter-reference/mail_connection_type)
+* [mail_domain](./administrators-guide/configuration-parameter-reference/mail_domain)
+* [mail_from](./administrators-guide/configuration-parameter-reference/mail_from)
+* [mail_host](./administrators-guide/configuration-parameter-reference/mail_host)
+* [mail_job_status_format](./administrators-guide/configuration-parameter-reference/mail_job_status_format)
+* [mail_license_status_format](./administrators-guide/configuration-parameter-reference/mail_license_status_format)
+* [mail_password](./administrators-guide/configuration-parameter-reference/mail_password)
+* [mail_port](./administrators-guide/configuration-parameter-reference/mail_port)
+* [mail_subjob_status_format](./administrators-guide/configuration-parameter-reference/mail_subjob_status_format)
+* [mail_user](./administrators-guide/configuration-parameter-reference/mail_user)
+* [mail_work_status_format](./administrators-guide/configuration-parameter-reference/mail_work_status_format)
+<br />
+* [supervisor_address](./administrators-guide/configuration-parameter-reference/supervisor_address)
+* [supervisor_default_cluster](./administrators-guide/configuration-parameter-reference/supervisor_default_cluster)
+* [supervisor_default_hostorder](./administrators-guide/configuration-parameter-reference/supervisor_default_hostorder)
+* [supervisor_default_max_cpus](./administrators-guide/configuration-parameter-reference/supervisor_default_max_cpus)
+* [supervisor_default_pgrp_subjob_limit](./administrators-guide/configuration-parameter-reference/supervisor_default_pgrp_subjob_limit)
+* [supervisor_default_priority](./administrators-guide/configuration-parameter-reference/supervisor_default_priority)
+* [supervisor_default_security](./administrators-guide/configuration-parameter-reference/supervisor_default_security)
+* [supervisor_default_user_subjob_limit](./administrators-guide/configuration-parameter-reference/supervisor_default_user_subjob_limit)
+* [supervisor_flags](./administrators-guide/configuration-parameter-reference/supervisor_flags)
+* [supervisor_global_resources](./administrators-guide/configuration-parameter-reference/supervisor_global_resources)
+* [supervisor_heartbeat_interval](./administrators-guide/configuration-parameter-reference/supervisor_heartbeat_interval)
+* [supervisor_heartbeat_timeout](./administrators-guide/configuration-parameter-reference/supervisor_heartbeat_timeout)
+* [supervisor_highest_user_priority](./administrators-guide/configuration-parameter-reference/supervisor_highest_user_priority)
+* [supervisor_host_policy](./administrators-guide/configuration-parameter-reference/supervisor_host_policy)
+* [supervisor_id](./administrators-guide/configuration-parameter-reference/supervisor_id)
+* [supervisor_idle_threads](./administrators-guide/configuration-parameter-reference/supervisor_idle_threads)
+* [supervisor_job_flags](./administrators-guide/configuration-parameter-reference/supervisor_job_flags)
+* [supervisor_language_flags](./administrators-guide/configuration-parameter-reference/supervisor_language_flags)
+* [supervisor_log_flags](./administrators-guide/configuration-parameter-reference/supervisor_log_flags)
+* [supervisor_logfile](./administrators-guide/configuration-parameter-reference/supervisor_logfile)
+* [supervisor_logpath](./administrators-guide/configuration-parameter-reference/supervisor_logpath)
+* [supervisor_manifest](./administrators-guide/configuration-parameter-reference/supervisor_manifest)
+* [supervisor_manifest_flags](./administrators-guide/configuration-parameter-reference/supervisor_manifest_flags)
+* [supervisor_max_clients](./administrators-guide/configuration-parameter-reference/supervisor_max_clients)
+* [supervisor_max_cpus_limit](./administrators-guide/configuration-parameter-reference/supervisor_max_cpus_limit)
+* [supervisor_max_metered_licenses](./administrators-guide/configuration-parameter-reference/supervisor_max_metered_licenses)
+* [supervisor_max_postboard_retry](./administrators-guide/configuration-parameter-reference/supervisor_max_postboard_retry)
+* [supervisor_max_priority](./administrators-guide/configuration-parameter-reference/supervisor_max_priority)
+* [supervisor_max_threads](./administrators-guide/configuration-parameter-reference/supervisor_max_threads)
+* [supervisor_max_worker_requeue](./administrators-guide/configuration-parameter-reference/supervisor_max_worker_requeue)
+* [supervisor_max_worker_retry](./administrators-guide/configuration-parameter-reference/supervisor_max_worker_retry)
+* [supervisor_migrate_timeout](./administrators-guide/configuration-parameter-reference/supervisor_migrate_timeout)
+* [supervisor_partner_licensing_host](./administrators-guide/configuration-parameter-reference/supervisor_partner_licensing_host)
+* [supervisor_partner_licensing_port](./administrators-guide/configuration-parameter-reference/supervisor_partner_licensing_port)
+* [supervisor_pgrp_subjob_limits](./administrators-guide/configuration-parameter-reference/supervisor_pgrp_subjob_limits)
+* [supervisor_pidfile](./administrators-guide/configuration-parameter-reference/supervisor_pidfile)
+* [supervisor_policy_binding](./administrators-guide/configuration-parameter-reference/supervisor_policy_binding)
+* [supervisor_policy_library](./administrators-guide/configuration-parameter-reference/supervisor_policy_library)
+* [supervisor_port](./administrators-guide/configuration-parameter-reference/supervisor_port)
+* [supervisor_preempt_policy](./administrators-guide/configuration-parameter-reference/supervisor_preempt_policy)
+* [supervisor_queue_algorithm](./administrators-guide/configuration-parameter-reference/supervisor_queue_algorithm)
+* [supervisor_queue_binding](./administrators-guide/configuration-parameter-reference/supervisor_queue_binding)
+* [supervisor_queue_library](./administrators-guide/configuration-parameter-reference/supervisor_queue_library)
+* [supervisor_reserve_timeout](./administrators-guide/configuration-parameter-reference/supervisor_reserve_timeout)
+* [supervisor_smart_share_mode](./administrators-guide/configuration-parameter-reference/supervisor_smart_share_mode)
+* [supervisor_smart_share_preempt_policy](./administrators-guide/configuration-parameter-reference/supervisor_smart_share_preempt_policy)
+* [supervisor_tmp_path](./administrators-guide/configuration-parameter-reference/supervisor_tmp_path)
+* [supervisor_universal_callback_path](./administrators-guide/configuration-parameter-reference/supervisor_universal_callback_path)
+* [supervisor_user_subjob_limits](./administrators-guide/configuration-parameter-reference/supervisor_user_subjob_limits)
+* [supervisor_verbosity](./administrators-guide/configuration-parameter-reference/supervisor_verbosity)
+* [supervisor_worker_configfile](./administrators-guide/configuration-parameter-reference/supervisor_worker_configfile)
+
+## Worker Parameters
+* [proxy_account](./administrators-guide/configuration-parameter-reference/proxy_account)
+* [proxy_execution_mode](./administrators-guide/configuration-parameter-reference/proxy_execution_mode)
+* [proxy_location](./administrators-guide/configuration-parameter-reference/proxy_location)
+* [proxy_nice_value](./administrators-guide/configuration-parameter-reference/proxy_nice_value)
+* [proxy_password](./administrators-guide/configuration-parameter-reference/proxy_password)
+<br />
+* [worker_address](./administrators-guide/configuration-parameter-reference/worker_address)
+* [worker_boot_delay](./administrators-guide/configuration-parameter-reference/worker_boot_delay)
+* [worker_boot_diagnostics_retries](./administrators-guide/configuration-parameter-reference/worker_boot_diagnostics_retries)
+* [worker_boot_diagnostics_retry_interval](./administrators-guide/configuration-parameter-reference/worker_boot_diagnostics_retry_interval)
+* [worker_check_interval](./administrators-guide/configuration-parameter-reference/worker_check_interval)
+* [worker_cluster](./administrators-guide/configuration-parameter-reference/worker_cluster)
+* [worker_cpus](./administrators-guide/configuration-parameter-reference/worker_cpus)
+* [worker_drive_map](./administrators-guide/configuration-parameter-reference/worker_drive_map)
+* [worker_flags](./administrators-guide/configuration-parameter-reference/worker_flags)
+* [worker_flight_check_path](./administrators-guide/configuration-parameter-reference/worker_flight_check_path)
+* [worker_groups](./administrators-guide/configuration-parameter-reference/worker_groups)
+* [worker_heartbeat_interval](./administrators-guide/configuration-parameter-reference/worker_heartbeat_interval)
+* [worker_host_domain](./administrators-guide/configuration-parameter-reference/worker_host_domain)
+* [worker_idle_threads](./administrators-guide/configuration-parameter-reference/worker_idle_threads)
+* [worker_job_types](./administrators-guide/configuration-parameter-reference/worker_job_types)
+* [worker_journal_location](./administrators-guide/configuration-parameter-reference/worker_journal_location)
+* [worker_log_timeout](./administrators-guide/configuration-parameter-reference/worker_log_timeout)
+* [worker_logfile](./administrators-guide/configuration-parameter-reference/worker_logfile)
+* [worker_logmode](./administrators-guide/configuration-parameter-reference/worker_logmode)
+* [worker_logpath](./administrators-guide/configuration-parameter-reference/worker_logpath)
+* [worker_lookup](./administrators-guide/configuration-parameter-reference/worker_lookup)
+* [worker_max_clients](./administrators-guide/configuration-parameter-reference/worker_max_clients)
+* [worker_max_threads](./administrators-guide/configuration-parameter-reference/worker_max_threads)
+* [worker_path_map](./administrators-guide/configuration-parameter-reference/worker_path_map)
+* [worker_pidfile](./administrators-guide/configuration-parameter-reference/worker_pidfile)
+* [worker_port](./administrators-guide/configuration-parameter-reference/worker_port)
+* [worker_post_interval](./administrators-guide/configuration-parameter-reference/worker_post_interval)
+* [worker_properties](./administrators-guide/configuration-parameter-reference/worker_properties)
+* [worker_resources](./administrators-guide/configuration-parameter-reference/worker_resources)
+* [worker_restrictions](./administrators-guide/configuration-parameter-reference/worker_restrictions)
+* [worker_template_path](./administrators-guide/configuration-parameter-reference/worker_template_path)
+
+## Client Parameters
+* [client_account](./administrators-guide/configuration-parameter-reference/client_account)
+* [client_cluster](./administrators-guide/configuration-parameter-reference/client_cluster)
+* [client_drive_map](./administrators-guide/configuration-parameter-reference/client_drive_map)
+* [client_host_domain](./administrators-guide/configuration-parameter-reference/client_host_domain)
+* [client_job_flags](./administrators-guide/configuration-parameter-reference/client_job_flags)
+* [client_logpath](./administrators-guide/configuration-parameter-reference/client_logpath)
+* [client_priority](./administrators-guide/configuration-parameter-reference/client_priority)
+* [client_restrictions](./administrators-guide/configuration-parameter-reference/client_restrictions)
+

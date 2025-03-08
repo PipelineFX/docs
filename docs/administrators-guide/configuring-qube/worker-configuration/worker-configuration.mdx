@@ -1,0 +1,34 @@
+---
+slug: /worker-configuration
+---
+
+# Worker Configuration
+
+Workers can be configured locally on each system or centrally from the Supervisor. Local configuration is done in the local qb.conf file; central configuration is done with a qbwrk.conf file on the Supervisor.
+
+## Configuration Topics
+- Local Worker Configuration
+- Centralized Worker Configuration
+- Service Mode vs. Desktop User Mode
+- Service Mode Authentication: User vs Proxy
+- Centralized Jobtypes
+- Specifying a Worker's Job Slots
+- Worker Drive Mounting
+- Worker Host Groups
+
+## Worker Startup Process
+When a Worker starts up, it performs the following actions to configure itself and locate the Supervisor.
+
+1. Start up and initialize with default configuration settings.
+2. Read the local qb.conf configuration file, and override the default configuration with any settings it finds in the file.
+3. If there is no Supervisor set in the configuration file, the Worker will send out a broadcast requesting a Supervisor to identify itself. (Supervisor autodiscovery)
+4. Contact the Supervisor for additional configuration settings located in the Supervisor's central Worker configuration file (qbwrk.conf).
+5. The Supervisor can be directed to use a different file for central Worker configuration - see supervisor_worker_configfile
+
+Note that each consecutive configuration setting will override any previous configuration setting. This behavior can be modified or reversed by changing the worker_lookup setting.
+
+## Supervisor Autodiscovery
+
+As described above, if the Supervisor isn\'t explicitly set in the Worker\'s configuration file, it will use autodiscovery to find the Supervisor host name and IP address. However that Supervisor and Worker must be on the same network subnet. Once it has that information it can then gather configuration from the Supervisor and continue the startup configuration process.
+
+In general, it is preferable to explicitly name the Supervisor however, since this speeds job startup time and reduces network traffic slightly

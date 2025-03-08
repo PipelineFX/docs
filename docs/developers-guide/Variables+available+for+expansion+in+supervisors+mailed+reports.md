@@ -1,0 +1,61 @@
+---
+sidebar_position: 14
+---
+
+# Variables available for expansion in supervisor's mailed reports
+
+## Job-specific variables
+
+* HOST
+* JOB_ACCOUNT
+* JOB_CLUSTER
+* JOB_CPUS
+* JOB_DATA
+* JOB_DOMAIN
+* JOB_FLAGS
+* JOB_GLOBALORDER
+* JOB_GROUPS
+* JOB_HOSTORDER
+* JOB_HOSTS
+* JOB_ID
+* JOB_KIND
+* JOB_LABEL
+* JOB_LOCALORDER
+* JOB_NAME
+* JOB_OMITGROUPS
+* JOB_OMITHOSTS
+* JOB_PACKAGE
+* JOB_PGRP
+* JOB_PID
+* JOB_PRIORITY
+* JOB_PROTOTYPE
+* JOB_REQUIREMENTS
+* JOB_RESTRICTIONS
+* JOB_STATUS
+* JOB_TIMECOMPLETE
+* JOB_TIMEELAPSED
+* JOB_TIMEOUT
+* JOB_TIMESTART
+* JOB_TIMESUBMIT
+* JOB_TYPE
+* JOB_USER
+* TRIGGERS
+* USER
+
+## Agenda-specific variables
+
+* WORK_NAME
+* WORK_HOST
+* WORK_STATUS
+* WORK_PID
+* WORK_SUBID
+* WORK_ADDRESS
+* WORK_RESULTPACKAGE
+
+## Job Instance-specific variables (formerly known as "subjobs")
+
+* SUBJOB_ID
+* SUBJOB_STATUS
+* SUBJOB_PID
+* SUBJOB_ADDRESS
+

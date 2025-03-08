@@ -1,0 +1,50 @@
+---
+slug: /installing-job-types
+---
+
+# Installing job types
+
+Installing job types under Qube is simple. Just copy the entire Job Type
+directory into the types directory under Qube's installation.
+
+OS | Path
+---|---
+Windows | C:\Program Files\qube\types
+Linux | /usr/local/pfx/qube/types
+macOS | /Applications/pfx/qube/types
+
+Because Qube is designed to be flexible, the administrator has the option to
+relocate the type's path, or include additional paths for Qube to search in.
+Our recommendation is for the administrator to locate the standard Qube job
+types and the site specific job types in different directories.
+
+To do this, the administrator must modify the qb.conf file. The tag to modify
+is the [worker_template_path](administrators-guide/configuration-parameter-reference/worker_template_path).
+
+Consult the [Qube Administrator's Guide, Centralized
+Jobtypes](administrators-guide/configuring-qube/worker-configuration/Centralized+Jobtypes) for more information on setting
+up Worker configuration.
+
+## Examples
+
+### Linux
+
+```
+worker_template_path="/usr/local/pfx/qube/[types:/site/qube/types](http://types/site/qube/types)"
+```
+
+In the above example, the administrator properly specified Qube's default
+types as well as included a network-mounted directory, which contains the
+studio's custom job types.  
+Once this is done, job types may be installed in the site's Job Type
+directory, allowing developers and users to build job types without direct
+access to the installation directories.
+
+### Windows
+
+```
+worker_template_path="C:/Program Files/qube/types;//server/share/site/qube/types"
+```
+
+* [Posix](developers-guide/job-types/installing-job-types/Posix)
+* [Windows](developers-guide/job-types/installing-job-types/Windows)

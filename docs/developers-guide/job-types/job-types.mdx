@@ -1,0 +1,25 @@
+---
+slug: /job-types
+---
+
+# Job Types
+  
+The Job Type is one of the most powerful aspects of the Qube! Remote Control
+system. With a Job Type, a developer can separate the application
+functionality into an interface and an underlying implementation. The
+interface is the "front end" that registers a job with Qube!. The
+implementation is the "back end" that is actually run by Qube!. In order to
+implement either the front end or the back end, some background in the Qube!
+API is necessary. At its simplest, the front end needs to determine the
+parameters of the job and the work agenda, and then register a job submission.
+The back end must acquire the job parameters, and receive its agenda items
+from the Supervisor frame server. The API provides function calls in a number
+of languages to perform these tasks. Currently, the Qube! API supports C++,
+Perl, Python, and MEL.
+
+* [Building job types](building-job-types)
+* [Installing job types](installing-job-types)
+* [Simple Job Type back end](developers-guide/job-types/Simple+Job+Type+back+end)
+* [Simple Job Type front end](simple-job-type-front-end)
+
+

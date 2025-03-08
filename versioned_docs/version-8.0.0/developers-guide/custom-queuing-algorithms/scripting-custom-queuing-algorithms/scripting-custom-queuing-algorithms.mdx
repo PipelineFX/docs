@@ -1,0 +1,58 @@
+---
+slug: /scripting-custom-queuing-algorithms
+---
+
+# Scripting custom queuing algorithms
+
+This is done using a script file plug-in written in Perl. The qb.conf setting
+for this is as follows:  
+
+```
+supervisor_queue_binding = Perl  
+supervisor_queue_library = _plugin_path_
+```
+
+This document isn't meant to be a tutorial on the Perl scripting language so
+we will assume developers modifying this module in the following documentation
+already have a functional knowledge of Perl's syntax. Good online resources
+for learning Perl can be found at
+[http://www.perl.com](http://www.perl.com) there also many good
+published books such as _Learning Perl_ published by O'Reilly which can get a
+beginning developer started with Perl scripting.  
+
+To create a new queuing algorithm, the developer must create a Perl module
+with the following Perl functions:
+
+1. qb_hostcmp($hosta, $hostb, $job)
+2. qb_init()
+3. qb_jobcmp($joba, $jobb, $host)
+4. qb_preemptcmp($runningjob, $candidatejob, $host)
+5. qb_rejectjob($job, $host)
+6. qb_starthost_deinit()
+7. qb_starthost_init()
+8. qb_startjob_deinit()
+9. qb_startjob_init()
+
+A function if not defined will automatically be overridden with the "Priority
+Queuing Algorithm" defaults.  
+Example scripts can be found the following locations:
+
+OS | Path
+---|---
+Linux: | /usr/local/pfx/qube/examples/supervisor
+Windows: | C:\Program Files\pfx\qube\examples\supervisor
+macOS: | /Applications/pfx/qube/examples/supervisor
+
+The functions defined are all used to control the queuing algorithm's
+properties.
+
+* [qb_hostcmp](developers-guide/custom-queuing-algorithms/scripting-custom-queuing-algorithms/qb_hostcmp)
+* [qb_init](developers-guide/custom-queuing-algorithms/scripting-custom-queuing-algorithms/qb_init)
+* [qb_jobcmp](developers-guide/custom-queuing-algorithms/scripting-custom-queuing-algorithms/qb_jobcmp)
+* [qb_preemptcmp](developers-guide/custom-queuing-algorithms/scripting-custom-queuing-algorithms/qb_preemptcmp)
+* [qb_rejectjob](developers-guide/custom-queuing-algorithms/scripting-custom-queuing-algorithms/qb_rejectjob)
+* [qb_starthost_deinit](developers-guide/custom-queuing-algorithms/scripting-custom-queuing-algorithms/qb_starthost_deinit)
+* [qb_starthost_init](developers-guide/custom-queuing-algorithms/scripting-custom-queuing-algorithms/qb_starthost_init)
+* [qb_startjob_deinit](developers-guide/custom-queuing-algorithms/scripting-custom-queuing-algorithms/qb_startjob_deinit)
+* [qb_startjob_init](developers-guide/custom-queuing-algorithms/scripting-custom-queuing-algorithms/qb_startjob_init)
+

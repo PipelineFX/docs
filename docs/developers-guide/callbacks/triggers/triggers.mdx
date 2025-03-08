@@ -1,0 +1,93 @@
+---
+slug: /triggers
+---
+
+# Triggers
+
+A **trigger** is a series of [callback events]/trigger-event-syntax)
+linked by logical operators into an expression. If the expression is evaluated
+and the result is found to be true, the callback is said to have been triggered.
+
+:::warning[&emsp;]
+Developers writing callbacks should be aware that **callback triggers are
+event-driven** (transitions from one state to another), not state-driven. So
+if jobB is dependent on jobA, but jobA has completed before jobB is submitted,
+the triggering event (the completion of jobA) will not occur again after jobB
+is submitted; jobB's trigger condition will never be met.
+
+This is why it's advisable to submit all jobs that are interdependent in one
+pass as a process group; there is no chance of a trigger event occurring prior
+to a job's submission.
+:::
+
+## Syntax
+
+The syntax for specifying an event consists of:
+
+```
+name-type-context-extra
+```
+
+Refer to [Trigger Event Syntax](/trigger-event-syntax) for more
+details.
+
+## Operators
+
+Triggers can be logically AND\'d or OR\'d, use the boolean operators **& &**
+and **||**.  They can be grouped with parentheses \"( )\", but grouping **is
+not supported**  when using the job **dependency**  attribute, only in
+callbacks.
+
+:::warning[&emsp;]
+The **dependency** language (used when setting a job's **dependency**
+attribute) uses a limited set of boolean operators, only AND and OR. The
+convention for the dependency language is to provide a comma-separated list of
+dependencies, such as: `link-complete-work-3927,link-complete-work-3928`,
+these are \'&&\'d together.
+:::
+
+## Examples
+
+When this job completes:
+
+```
+complete-job-self
+```
+
+When job 19294 starts running:
+
+```
+running-job-19294
+```
+
+When my \#2 subjob completes:
+
+```
+complete-subjob-self-2
+```
+
+When the job with the label 'hello' is done:
+
+```
+done-job-hello
+```
+
+The events are then combined together with simple operators to define more
+complex scenarios:
+
+When I complete and my parent completes:
+
+```
+complete-job-self && complete-job-parent
+```
+
+When the job labeled "sibling" starts running, and I am done:
+
+```
+running-job-sibling && done-job-self
+```
+
+# See Also
+
+[Trigger Event Syntax](/trigger-event-syntax)
+

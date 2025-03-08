@@ -1,0 +1,42 @@
+---
+slug: /simple-job-type-front-end
+---
+
+# Simple Job Type front end
+
+Here is an Perl example of a typical job front end that can handle a job that
+is based on frames.
+
+## **Example**
+
+```perl title="Perl" showLineNumbers
+use lib ../api/perl; use qb;
+
+my %env = %ENV;
+
+my $frames = qb::genframes("1-300");
+
+my $data = {  
+"env" = \%env,
+
+"cmdline" = /bin/sleep . int(rand(40) + 1) };
+
+my $job = {  
+"name" => "Frame Job", "priority" => 1, "prototype" => "frame", "branch" =>
+"/",  
+"cpus" => 20,  
+"data" => $data,  
+"work" => $frames  
+};
+
+my @jobs = qb::submit($job); for my $job (@jobs) {
+
+print "submitted job - id: ", $job->{id}, "\n"; }
+```
+  
+Initially set the path to the API library, and load the API module. Every job
+contains a copy of the user's environment variables. These variables can be
+manipulated, if necessary.
+
+* [Generating agendas](developers-guide/job-types/simple-job-type-front-end/Generating+agendas)
+

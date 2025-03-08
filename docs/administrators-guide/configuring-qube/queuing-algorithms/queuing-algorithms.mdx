@@ -1,0 +1,24 @@
+---
+slug: /queuing-algorithms
+---
+
+# Queuing Algorithms
+Despite the number of processors in a render farm, it is still necessary to
+order the jobs so that they are dispatched to execution hosts in a deterministic
+order. Queuing is the process of properly sorting the list of jobs to be executed.
+
+The queueing algorithm used by the supervisor is specified by the qb.conf
+parameter supervisor_queue_algorithm. The predefined algorithm names are
+
+* queue:  [First Come, First Served (FCFS)](./administrators-guide/configuring-qube/queuing-algorithms/First+Come+First+Served+FCFS)
+* priority: [Priority](./administrators-guide/configuring-qube/queuing-algorithms/Priority)
+* cluster: [Clustering and Job Priority](./administrators-guide/configuring-qube/Clustering+and+Job+Priority)
+
+## Custom Algorithms
+Qube! ships with a number of built-in queuing algorithms that should be sufficient for most productions. Qube! also allows developers to take advantage of the research PipelineFX has done in queuing system design to write their own queuing system algorithm. This feature enables a site to design an queuing algorithm tailored to its own policies.
+
+See the Custom Queuing Algorithms in the Developer's Guide for more information on how to develop custom queuing algorithms.
+
+## See Also
+* [supervisor_queue_algorithm](./administrators-guide/configuration-parameter-reference/supervisor_queue_algorithm)
+
