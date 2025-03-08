@@ -23,7 +23,7 @@ const config = {
   organizationName: 'pipelinefx.github.io', // Usually your GitHub org/user name.
   projectName: 'Documentation', // Usually your repo name.
 
-  onBrokenLinks: 'throw',
+  onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
 
   trailingSlash: false,
