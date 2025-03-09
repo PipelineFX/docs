@@ -155,5 +155,5 @@ Command-line (Remove Permission): qbusers --group group --delete permission [per
 ## See Also
 * QubeUI User Permissions
 * [supervisor_default_security](../configuration-parameter-reference/supervisor_default_security)
-* [qbusers](/Documentation/advanced-users-guide/command-line-reference/qbusers)
+* [qbusers](/advanced-users-guide/command-line-reference/qbusers)
 

@@ -35,7 +35,7 @@ Internal=cluster
 
 ## See Also
 
-* [Queuing Algorithms](/Documentation/custom-queuing-algorithms)  
-* [Custom Queuing Algorithms](/Documentation/custom-queuing-algorithms)
-* [Scripting Custom Queuing Algorithms](/Documentation/scripting-custom-queuing-algorithms)
+* [Queuing Algorithms](/custom-queuing-algorithms)  
+* [Custom Queuing Algorithms](/custom-queuing-algorithms)
+* [Scripting Custom Queuing Algorithms](/scripting-custom-queuing-algorithms)
 

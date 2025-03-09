@@ -16,7 +16,7 @@ This is a Worker startup parameter. Since this parameter is involved in the
 initial startup of the worker and affects the behavior of the worker before it
 contacts the supervisor to request a "remote" configuration from the central
 worker configuration file (see
-[qbwrk.conf](/Documentation/centralized-worker-configuration)), it's considered
+[qbwrk.conf](/centralized-worker-configuration)), it's considered
 a _bootstrapping_ parameter and  _can only be specified in the worker's local
 qb.conf_  configuration file. Any mention in the global qbwrk.conf file will
 be ignored.
