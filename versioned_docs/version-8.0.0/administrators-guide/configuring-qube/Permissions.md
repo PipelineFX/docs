@@ -15,7 +15,7 @@ The default permission set is configured by [supervisor_default_security](../con
 
 Each permission must be specified per user. Users not listed in the table will use the default permission set. 
 
-Individual and group user permissions are specified using the user access list which is modified from the QubeUI User Permission View or by using the [qbusers](/Documentation/advanced-users-guide/command-line-reference/qbusers) command.
+Individual and group user permissions are specified using the user access list which is modified from the QubeUI User Permission View or by using the [qbusers](/advanced-users-guide/command-line-reference/qbusers) command.
 
 In the QubeUI, the user groups are separated from the user by a ":".
 
