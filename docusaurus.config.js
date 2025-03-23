@@ -53,11 +53,6 @@ const config = {
       ({
         docs: {
 		  routeBasePath: '/', // Serve the docs at the site's root
-          //sidebarPath: './sidebars.js',
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          //editUrl:
-          //  'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
 		  sidebarPath: require.resolve('./sidebars.js'),
           //lastVersion: 'current', // Make the latest version act as "current"
           //onlyIncludeVersions: ['current','8.0.0'], // Explicitly list versions
@@ -74,8 +69,6 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
-      // Replace with your project's social card
-      //image: 'img/docusaurus-social-card.jpg',
       navbar: {
         title: 'PipelineFX Documentation',
         logo: {
@@ -90,7 +83,7 @@ const config = {
             label: 'Qube!',
           },
           {
-            href: 'https://pipelinefx.github.io/docs',
+            href: 'https://github.com/PipelineFX/docs',
             label: 'GitHub',
             position: 'right',
           },
@@ -103,42 +96,11 @@ const config = {
       footer: {
         style: 'dark',
         links: [
-          /*{
-            title: 'Docs',
-            items: [
-              {
-                label: 'Tutorial',
-                to: '/intro',
-              },
-            ],
-          },
           {
-            title: 'Community',
             items: [
-              {
-                label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-              },
-              {
-                label: 'Discord',
-                href: 'https://discordapp.com/invite/docusaurus',
-              },
-              {
-                label: 'Twitter',
-                href: 'https://twitter.com/docusaurus',
-              },
-            ],
-          },*/
-          {
-            //title: 'More',
-            items: [
-              /*{
-                label: 'Blog',
-                to: '/blog',
-              },*/
               {
                 label: 'GitHub',
-                href: 'https://github.com/PipelineFX',
+                href: 'https://github.com/PipelineFX/docs',
               },
             ],
           },
