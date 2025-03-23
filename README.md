@@ -116,4 +116,4 @@ npm run serve -- --host 0.0.0.0
 
 Mahalo,
 
-[PipelineFX Support]<support@pipelinefx.com)>
+[PipelineFX Support]<support@pipelinefx.com>
