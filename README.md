@@ -20,7 +20,7 @@ Please feel free to use internally or submit pull requests if you find any issue
 winget install Schniz.fnm
 ```
 
-*<open new terminal>*
+*open new terminal*
 
 * **Download and install Node.js**
 ```
@@ -30,7 +30,7 @@ fnm install 20
 * **Add the node install to the PATH**
 e.g. "C:\Users\\\<User\>\AppData\Roaming\fnm\node-versions\v20.19.0\installation"
 
-*<open new terminal>*
+*open new terminal*
 
 * **Verify the Node.js version**
 Should print "v20.19.0" or later.
@@ -58,7 +58,7 @@ npm install @cmfcmf/docusaurus-search-local
 winget install -e --id Git.Git
 ```
 
-*<open new terminal>*
+*open new terminal*
 
 * **Switch to your Git folder**
 ```
