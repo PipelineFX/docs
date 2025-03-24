@@ -9,13 +9,13 @@ PipelineFX provides many avenues to answer customer issues and questions with Qu
 
 ## This Documentation
 
-The documentation you are reading is searchable, and that may be the quickest way to answer your question. Just type a few keywords into the search box in the upper left, above the Contents. 
+The documentation you are reading is searchable, and that may be the quickest way to answer your question. Just type a few keywords into the search box in the upper right corner. 
 
 ## Knowledge Base
 
 The Knowledge Base provides a list of answers to common questions posed by customers. It is indexed and can be searched as a single webpage.
 
--	Knowledge Base **need link**
+-	[Knowledge Base](knowledge-base)
 
 ## Forum
 
