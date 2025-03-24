@@ -56,13 +56,13 @@ Python3 Required!
 
 Python3 (3.6 to 3.8) is a prerequisite now for all installations.
 You need to have it installed on each system, prior to running the
-QubeInstaller.
+Qube! Installer.
 
 :::
 
 ## Linux Prerequisites
 
-On linux, several packages must be present before Qube can be installed,
+On linux, several packages must be present before Qube! can be installed,
 and some pre-configuration is needed.
 
 :::info
@@ -74,7 +74,7 @@ your version of CentOS/RHEL
 
 :::note
 
-QubeInstaller requires the Qt5Core DSO to be available on the system.
+Qube! Installer requires the Qt5Core DSO to be available on the system.
 Check that you have the "qt5-qtbase" package installed, especially if you are
 attempting to run it on a "minimal" or "server" OS installation.
 
@@ -123,10 +123,10 @@ attempting to run it on a "minimal" or "server" OS installation.
 
 #### Manually Installing the Qube! 8 Supervisor on Windows
 If you intend to manually install a Qube! 8 supervisor on Windows rather
-than using the Qube Installer, please refer to the Installing Qube! Manually page for instructions
+than using the Qube! Installer, please refer to the Installing Qube! Manually page for instructions
 on running the "supe_postinstall.bat" script after installation in
 order to initialize the databases; this step is normally performed by
-the Qube Installer wizard, as Windows security policies prohibit certain
+the Qube! Installer wizard, as Windows security policies prohibit certain
 operations from being performed by an MSI installer directly.
 
 :::
