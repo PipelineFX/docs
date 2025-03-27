@@ -18,7 +18,7 @@ In this exercise, we will work slightly backward - getting parameters from a pre
 
 We will start by submitting a job to get started. Attached is a dummy "Maya BatchRender (arnold)" 
 
-* <a href="/Maya_Arnold_Render.xja" download>Maya_Arnold_Render.xja</a>
+* [Maya_Arnold_Render.xja](\/Maya_Arnold_Render.xja)
 
 Download the above and open it up in QubeUI by going to Submit > "Load Job From File" menu > browse to the download location and open.  You will get the following submission dialog:
 
