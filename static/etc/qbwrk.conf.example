@@ -1,0 +1,201 @@
+#===================================================================== 
+#                     EXAMPLE qbwrk.conf 
+#===================================================================== 
+
+# This is a brief description of a few commonly used properties to 
+# setup the global qbwrk.conf which is distributed to workers with the 
+# command "qbadmin w --reconfigure"; additional reading can be found at
+
+# == additional reading ==
+# http://pipelinefx.com/docs/administration_guide.html#_Toc166146287
+#   or 
+# section 4.2.4 of the Qube Administrator's Guide, "Centralized Worker
+# Configuration (Manually editing the qbwrk.conf)".
+
+# NOTE: this file is read from the top-down, so if you define something and
+# then later re-define it, the latter definition applies.  This also allows you
+# to have more "generalized" defintions earlier in the file, and then override
+# them for specific hosts lower down in the file.
+
+# The syntax of your qbwrk.conf file can be checked before you apply the
+# changes with the command-line utility "QBDIR/sbin/qbconfilefile /etc/qbwrk.conf".
+# Once you're satisfied that qbwrk.conf evaluates in the expected fashion, you
+# can publish your changes with "qbadmin w --reconfigure"
+
+
+#===================================================================== 
+#                     EXAMPLE STUDIO LAYOUT
+#===================================================================== 
+# For this example the studio will be split into hosts based on their 
+# role, ie: 3d, 2d, & Workstation. 3d hosts will be named render3d01 - 10, 
+# 2d hosts will be named render2d01 - 10 and workstation01 -10
+
+
+
+#===================================================================== 
+#                     CREATING TEMPLATES 
+#===================================================================== 
+# Use the below examples to model templates of your studio layout 
+
+#=====================================================================
+# Reserved template names:
+#=====================================================================
+#
+# [default] - applied to all entries, usually the first thing defined in the file
+#
+# [winnt] - applied to all Windows-based workers
+#
+# [osx] - applied to all OS X workers
+#
+# [linux] - applied to all linux worker
+
+#=========Un-comment below and alter for your environment=============
+
+#[Farm] 
+#proxy_execution_mode = user 
+#worker_properties = host.nuke6.2=1, host.maya2011=1 
+#worker_cpus = 1 
+#worker_groups = all,linux,maya,nuke
+
+#===================================================================== 
+# Above is an example of a template that can be set using logical names 
+# to assign a set of commonly used properties
+
+# "[Farm]" is the name of the template that can be used to assign the 
+# following properties. you can set as many of these as you see fit
+
+# "proxy_execution_mode" is property to set how Qube! executes in your 
+# environment "User" means the submitting user's network credentials and 
+# permissions will be used *additional reading 
+# http://pipelinefx.com/docs/administration_guide.html#_Toc116451718
+
+# "worker_properties" is for assigning global resources such as licenses
+# global resources are set in qb.conf *additional reading 
+# http://pipelinefx.com/docs/administration_guide.html#_Toc166146311
+
+# "worker_cpus" is a property to hard set the amount of cpu's on the 
+# worker *if left commented worker default cpu's are calculated*
+
+# "worker_groups" one or multiple groups the worker belongs to
+
+
+
+#===================================================================== 
+#                    TEMPLATE ASSIGNMENT 
+
+# Below is an example of how to assign the above template to a list of 
+# worker hosts
+
+
+#=========Un-comment below and alter for your environment=============
+#[render2d01] : Farm 
+
+#[render3d[01-05]] : Farm 
+
+#[worstation01] : Farm
+#worker_description = "lead TD workstation"
+
+#===================================================================== 
+# Above is an example of how to assign the template [Farm]
+
+# "[render2d01] : Farm" is setting the template to a single machine
+
+# "[render3d[01-05]] : Farm" is setting the template to a range of 
+# machines
+
+# "[worstation01] : Farm" is setting the template to worstation01
+
+# "worker_description =" assigns a description to the above worker as an
+# additional property
+
+
+
+#===================================================================== 
+#                  GLOBAL PLATFORM NAMES 
+
+# using the below example you can assign properties by OS 
+# [default] will assign to all OS's
+
+
+#=========Un-comment below and alter for your environment=============
+
+#[osx] 
+#worker_description = "All OSX workers" 
+
+#[linux]
+#worker_description = "All Linux workers" 
+
+#[winnt] 
+#worker_description = "All Windows workers"
+
+
+
+#===================================================================== 
+#                        CLUSTERS 
+
+# Use the below example to assign clusters to your workers note the 
+# examples of submitting jobs from the cmd line. 
+# Clusters can also be assigned using the template method above 
+# == additional reading ==
+# http://pipelinefx.com/docs/administration_guide.html#_Toc166146302
+
+
+#=========Un-comment below and alter for your environment=============
+
+#[render3d01]
+#worker_cluster = "/farm"
+#worker_restrictions = "/farm or /farm/*"
+
+#===================================================================== 
+# above is to define a host that will run jobs in any cluster at /farm
+# or 1 level below - done with the '*'
+
+
+#=========Un-comment below and alter for your environment=============
+
+#[render2d01]
+#worker_cluster = "/farm/nuke"
+#worker_restrictions = "/farm/nuke or /farm/nuke/+"
+
+#=====================================================================
+# above is to define a host that will only run jobs in /farm/nuke or any
+# level below - done with the '+'
+
+
+#=========Un-comment below and alter for your environment=============
+
+#[workstation05]
+#worker_cluster = "/farm/nuke/workstations"
+#worker_restrictions = "/farm/nuke/workstations"
+
+#===================================================================== 
+# above is to define a host that will only run jobs in 
+# /farm/nuke/workstations
+
+
+
+#=====================================================================
+#               EXAMPLE SUBMISSION USING CLUSTERS
+
+#=====================================================================
+# submit a job that will run only in /farm:
+
+# "qbsub -cluster /farm -restriction /farm"
+
+#===================================================================== 
+# submit a job that will prefer to run in /farm/nuke, but could run in 
+# any host in /farm or in the first level below /farm
+
+# "qbsub -cluster /farm/nuke -restriction '/farm or /farm/*'"
+
+#=====================================================================
+# submit a job that will prefer to run in /farm/nuke/workstations, but
+# could run in any host at any level at /farm or below
+
+# "qbsub -cluster /farm/nuke/workstations -restriction '/farm or 
+# /farm/+' hostname"
+
+#=====================================================================
+
+
+
