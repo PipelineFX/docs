@@ -8,20 +8,20 @@ sidebar_position: 1
 
 See attached files for commented examples of C++.
 
-* <a href="/updateworkerresources.cpp" download>updateworkerresources.cpp</a>
-* <a href="/updateworkerproperties.cpp" download>updateworkerproperties.cpp</a>
-* <a href="/rangesubmit.cpp" download>rangesubmit.cpp</a>
-* <a href="/qbjobs.cpp" download>qbjobs.cpp</a>
-* <a href="/qbjobs_2003.vcproj" download>qbjobs_2003.vcproj</a>
-* <a href="/prioritymod.cpp" download>prioritymod.cpp</a>
-* <a href="/Makefile" download>Makefile</a>
-* <a href="/examples.sln" download>examples.sln</a>
-* <a href="/examples_2003.sln" download>examples_2003.sln</a>
-* <a href="/deleteworkerresources.cpp" download>deleteworkerresources.cpp</a>
-* <a href="/deleteworkerproperties.cpp" download>deleteworkerproperties.cpp</a>
-* <a href="/callback1.cpp" download>callback1.cpp</a>
-* <a href="/callback1.vcproj" download>callback1.vcproj</a>
-* <a href="/callback1_2003.vcproj" download>callback1_2003.vcproj</a>
-* <a href="/callback2.cpp" download>callback2.cpp</a>
-* <a href="/callback2.vcproj" download>callback2.vcproj</a>
-* <a href="/callback2_2003.vcproj" download>callback2_2003.vcproj</a>
+* [updateworkerresources.cpp](\/cpp/updateworkerresources.cpp)
+* [updateworkerproperties.cpp](\/cpp/updateworkerproperties.cpp)
+* [rangesubmit.cpp](\/cpp/rangesubmit.cpp)
+* [qbjobs.cpp](\/cpp/qbjobs.cpp)
+* [qbjobs_2003.vcproj](\/cpp/qbjobs_2003.vcproj)
+* [prioritymod.cpp](\/cpp/prioritymod.cpp)
+* [Makefile](\/cpp/Makefile)
+* [examples.sln](\/cpp/examples.sln)
+* [examples_2003.sln](\/cpp/examples_2003.sln)
+* [deleteworkerresources.cpp](\/cpp/deleteworkerresources.cpp)
+* [deleteworkerproperties.cpp](\/cpp/deleteworkerproperties.cpp)
+* [callback1.cpp](\/cpp/callback1.cpp)
+* [callback1.vcproj](\/cpp/callback1.vcproj)
+* [callback1_2003.vcproj](\/cpp/callback1_2003.vcproj)
+* [callback2.cpp](\/cpp/callback2.cpp)
+* [callback2.vcproj](\/cpp/callback2.vcproj)
+* [callback2_2003.vcproj](\/cpp/callback2_2003.vcproj)
