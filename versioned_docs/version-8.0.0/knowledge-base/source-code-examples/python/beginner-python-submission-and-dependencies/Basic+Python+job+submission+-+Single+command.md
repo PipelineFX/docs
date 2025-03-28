@@ -25,8 +25,7 @@ except ImportError:
     for api_path in (qbdir_api,
                      "/Applications/pfx/qube/api/python/",
                      "/usr/local/pfx/qube/api/python/",
-                     "C:\\Program Files\\pfx\\qube\\api\\python",
-                     "C:\\Program Files (x86)\\pfx\\qube\\api\\python"):
+                     "C:\\Program Files\\pfx\\qube\\api\\python"):
         if api_path not in sys.path and os.path.exists(api_path):
             sys.path.insert(0,api_path)
             try:
@@ -76,6 +75,7 @@ def main():
     listOfSubmittedJobs = qb.submit(listOfJobsToSubmit)
     for job in listOfSubmittedJobs:
         print(job['id'])
+
 # Below runs the "main" function
 if __name__ == "__main__":
     main()
