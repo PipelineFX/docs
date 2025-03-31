@@ -108,7 +108,7 @@ const config = {
         copyright: `Copyright (c) ${new Date().getFullYear()} PipelineFX LLC, Inc. Built with Docusaurus 3.7.0.`,
       },
       prism: {
-		additionalLanguages: ['perl','sql'],
+		additionalLanguages: ['perl','sql','bash'],
         theme: prismThemes.github,
         darkTheme: prismThemes.dracula,
       },
