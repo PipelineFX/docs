@@ -34,6 +34,8 @@ In the submission dialog, under "Advanced Job Control," there exists a
 
 ![image](img/7af5ee4c1a2c0b223ea89083994308bc.png) 
 
+![image](img/c37fdf7a7a2cedcbfd13abd243d97a22.png)
+
 Being that we have multiple passes/jobs that must complete before our comp
 has all the parts for each frame, we can set a second dependency by simply
 clicking the "Add" button again, and choosing a different jobid. Continue
