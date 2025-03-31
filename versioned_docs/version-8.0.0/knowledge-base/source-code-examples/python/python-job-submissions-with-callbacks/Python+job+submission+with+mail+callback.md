@@ -41,6 +41,6 @@ if __name__ == "__main__":
 ```
 
 :::tip
-See the mail_\* parameters from [Configuration Parameter Reference](./configuration-parameter-reference) for how to both setup mail and adjust the various mail templates.
+See the mail_\* parameters from [Configuration Parameter Reference](/configuration-parameter-reference) for how to both setup mail and adjust the various mail templates.
 :::
 
