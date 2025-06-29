@@ -10,7 +10,7 @@ sidebar_position: 117
 
 The template _path_ is used to specify where the Worker should look to find
 the libraries/files associated with the jobs it will run. Multiple paths are
-delimited by colons on OS X / Linux and semi-colons on Windows.
+delimited by colons on macOS / Linux and semi-colons on Windows.
 
 :::danger[Several important things to take note of are:]
 

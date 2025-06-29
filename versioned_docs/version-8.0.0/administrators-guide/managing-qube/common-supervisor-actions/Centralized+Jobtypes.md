@@ -6,7 +6,7 @@ sidebar_position: 7
 
 Though it is the easiest for small farms, you do not have to always install jobtypes locally on the Workers. They can be centrally located on a network file system.
 
-Set the worker_template_path to point to the location of the jobtypes (delimited by colons on OS X / Linux and semi-colons on Windows), but ensure you also include the default worker_template_path, as this contains the compiled 'cmdline' and 'cmdrange' jobtypes that are installed with the worker.
+Set the worker_template_path to point to the location of the jobtypes (delimited by colons on macOS / Linux and semi-colons on Windows), but ensure you also include the default worker_template_path, as this contains the compiled 'cmdline' and 'cmdrange' jobtypes that are installed with the worker.
 
 :::danger[Important]
 Several important things to take note of are:

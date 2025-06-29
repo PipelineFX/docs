@@ -19,7 +19,7 @@ System-wide flight checks are installed by the site administrator into predefine
 -	$QBDIR/flightCheck/agenda/pre (agenda-level preflights)
 -	$QBDIR/flightCheck/agenda/post (agenda-level postflights)
 
-where **$QBDIR** is the system's Qube install location, which is, by default, "/usr/local/pfx/qube" on Linux, "/Applications/pfx/qube" on Mac OS X, and "C:\Program Files\Pfx\Qube" on Windows.
+where **$QBDIR** is the system's Qube install location, which is, by default, "/usr/local/pfx/qube" on Linux, "/Applications/pfx/qube" on macOS, and "C:\Program Files\Pfx\Qube" on Windows.
 
 The worker parameter worker_flight_check_path may be set in qb.conf (or qbwrk.conf), to override the default "$QBDIR/flightCheck"
 

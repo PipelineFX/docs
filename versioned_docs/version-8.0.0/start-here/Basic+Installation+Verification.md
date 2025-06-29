@@ -35,7 +35,7 @@ requests.
 The simplest test possible is to submit a job that simply runs the
 "set" command, which does nothing but print out the operating
 system's environment variables. You can see what it's expected to do
-by opening a cmd prompt on Windows or a Terminal on OS X and simply
+by opening a cmd prompt on Windows or a Terminal on macOS and simply
 typing `set` and hitting \<`Enter`\>.
 
 Start the Qube! UI, and select the Submit-\>Tests-\>Test 'set' job

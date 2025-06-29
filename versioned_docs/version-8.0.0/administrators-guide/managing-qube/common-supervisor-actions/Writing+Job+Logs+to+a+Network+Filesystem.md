@@ -38,7 +38,7 @@ Similarly the Client should read the job log files direct from disk as well inst
 On the Supervisor, job logs will be located in `\<supervisor_logpath\>/job`. On the Worker, job logs will be located in the `\<worker_logpath\>/job`. **Both these directories should point to the same location on a shared filesytem.**
 
 :::info
-The permissions on the shared log directory must be world-writable, which on linux and OS X means drwxrwxrwx or mode 0777, and on Window is Everyone [Full Control]
+The permissions on the shared log directory must be world-writable, which on linux and macOS means drwxrwxrwx or mode 0777, and on Window is Everyone [Full Control]
 :::
 
 ## Steps to Set the Job Log Directory
