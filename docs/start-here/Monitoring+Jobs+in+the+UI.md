@@ -124,7 +124,7 @@ As of version 7.5-0, the list of available actions are as follows:
         rendering frame(s) complete. The job will remain in a
         "blocked" state until it is manually unblocked.
 
-    -   Block (Purge): Stops this job immediately, but sets the job
+    -   Block (Purge): Stops this job immediately, but sets the job
         state to "blocked". The job will not run again until it is
         manually unblocked.
 
@@ -143,9 +143,9 @@ As of version 7.5-0, the list of available actions are as follows:
         parameters. A submission dialog is opened so you can modify the
         job before submission.
 
-    -   Retry Failed Frames: Re-render all frames marked as failed
+    -   Retry Failed Frames: Re-render all frames marked as failed
 
-    -   Retry Job: Start this job over, using the same job id. All
+    -   Retry Job: Start this job over, using the same job id. All
         frames will be re-rendered, regardless of whether or not they
         had previously completed.
 
@@ -169,7 +169,7 @@ As of version 7.5-0, the list of available actions are as follows:
     -   Lock Host (Finish Current): Same as above, but the currently
         rendering frames are allowed to finish.
 
-    -   Lock Host (Purge): Stop all jobs running on this worker
+    -   Lock Host (Purge): Stop all jobs running on this worker
         immediately, then leave the worker in a "locked" state which
         will prevent it from accepting any more work until it is
         manually unlocked.

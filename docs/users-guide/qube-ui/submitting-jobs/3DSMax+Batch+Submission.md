@@ -44,7 +44,7 @@ below.
 :::note
 
 Not all sections need to be filled in in order to render. Only the
-fields marked in red are required.
+fields marked in red are required.
 
 :::
 

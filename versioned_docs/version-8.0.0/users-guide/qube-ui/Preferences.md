@@ -36,7 +36,7 @@ an associated preference key that you can set an environment variable
 for, see the preferences details table below. All preferences can be set
 but some have complex formatting and it\'s recommended not to set them
 as incorrect values can lead to errors within the Qube! UI, if you still
-want to set them please send an email to  for details - alternatively
+want to set them please send an email to for details - alternatively
 you can look in the preferences database on the supervisor for
 formatting examples.
 

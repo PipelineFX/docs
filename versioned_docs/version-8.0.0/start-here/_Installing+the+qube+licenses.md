@@ -96,7 +96,7 @@ security policy.
 ![image](img/424952629a9f097705d40579e013929868a99ca9.png)
 
 A dialog will appear, prompting you to copy & paste your license
-strings.  You have the option of either adding the keys to your existing
+strings. You have the option of either adding the keys to your existing
 licenses or replace the license file.
 
 ![image](img/4d4172af07da775669e95b5ce3df7b6564b5d7d8.png)

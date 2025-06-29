@@ -123,7 +123,7 @@ Choose from drop down to override scene settings.
 
 **Renderer**
 
-Choose from drop down to override scene settings 
+Choose from drop down to override scene settings.
 
 **Render Threads**
 

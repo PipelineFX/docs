@@ -119,7 +119,7 @@ For example, a machine is running Windows no matter how many jobs land
 on it.
 
 Workers have consumable **resources**, such as CPUs and memory,
-that  must be **reserved** by jobs. The facility may also have
+that must be **reserved** by jobs. The facility may also have
 resources, such as software licenses, that must also be reserved. The
 Supervisor looks for Workers that have those particular resources, and
 then reserves slots on them for the job(s) it wants to assign. Resources

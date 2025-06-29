@@ -39,14 +39,14 @@ steps.
 -   You must have administration privileges to install the software.
 
     -   For Windows users, you may want to right-click \> "Run
-        as Administrator" or just log in as the Administrator.
+        as Administrator" or just log in as the Administrator.
 
     -   For Linux users, you must run as root or a sudoer.
 
     -   macOS users will be prompted to enter an admin password before
-        installation begins.
+        installation begins.
 
--   Once components have been downloaded, the installer can be run again
+-   Once components have been downloaded, the installer can be run again
     on other machines without accessing the internet by pointing it to
     the download location used by the previous install session.
 

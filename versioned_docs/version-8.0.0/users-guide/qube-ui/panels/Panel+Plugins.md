@@ -9,7 +9,7 @@ sidebar_position: 15
 The Qube! UI allows you to write your own panels, these are known as
 Panel Plugins. When you first install the Qube! UI there are two example
 Panel Plugins, a 'Job Properties' plugin that gives you a nicer to
-look at version of the built-in . Also a 'Test Panel' that
+look at version of the built-in. Also a 'Test Panel' that
 demonstrates the use of buttons and retrieving selected values from the
 various Qube! UI lists.
 

@@ -14,7 +14,7 @@ Right-clicking on selected job(s) allows you to perform the following
 actions.
 
 -   **Lock host (+ Purge)**: Lock the host immediately, aborting
-    currently running jobs and returning them to pending. 
+    currently running jobs and returning them to pending.
 
 -   **Lock host (+ Finish Current)**: Finish currently running jobs and
     then lock the host.

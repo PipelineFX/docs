@@ -67,7 +67,7 @@ Number of threads requested per instances.
 This checkbox sets the instances to request all cores on a worker.
 
 **Range**
-Frame range for the job (e.g 1-100, or 1-100x3, or 1,3,7,10). Most jobs
+Frame range for the job (e.g 1-100, or 1-100x3, or 1,3,7,10). Most jobs
 require a frame range to execute on the Workers. You can set this range
 in a few different ways :
 
@@ -80,7 +80,7 @@ in a few different ways :
 
 **Range Execution Order**
 Order to render the items.
-(Ascending=1,2,3,4,5\...,Descending=10,9,8\...,Binary=first,middle,last\...) You
+(Ascending=1,2,3,4,5\...,Descending=10,9,8\...,Binary=first,middle,last\...) You
 can set the order in which your frames are rendered. The drop down
 options are:
 
@@ -96,7 +96,7 @@ options are:
     frames in the sequence to make sure it is rendering correctly.
 
 **Retries**
-Number of times to retry a failed frame/job instance. The default value
+Number of times to retry a failed frame/job instance. The default value
 of -1 means don't retry.
 
 **Retry Delay**

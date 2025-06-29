@@ -14,7 +14,7 @@ the UI title bar:
 ![image](img/57ea86e886b845247fc24ae9422575fd8179b97b.png)
 
 If you see 0 licenses you will need to install the licenses on the
-supervisor. See  if you have a license key to install.
+supervisor. See if you have a license key to install.
 
 ### Test the supervisor connectivity
 

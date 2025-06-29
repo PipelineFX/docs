@@ -233,7 +233,7 @@ To remove a preset.
 3.  Click the '-' button.\
     ![image](img/16471500f30b14011b30d774e5239f84f293812c.png)
 
-### Advanced job tree structuring 
+### Advanced job tree structuring
 
 It is possible to write your own Level Functions using Python, but
 first some definitions so we're on the same page.
