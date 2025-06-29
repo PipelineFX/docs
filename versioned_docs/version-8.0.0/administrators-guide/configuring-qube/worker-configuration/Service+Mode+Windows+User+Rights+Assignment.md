@@ -4,7 +4,7 @@ sidebar_position: 7
 
 # Service Mode: Windows: User Rights Assignment
 
-On Windows a Qube! worker running in [Service Mode](./Service+Mode+vs+Desktop+User+Mode) requires the following security policy settings.
+On Windows a Qube! worker running in [Service Mode](./Service+Mode+vs+Desktop+User+Mode) requires the following user rights under the [User Rights Assignment](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/user-rights-assignment) security policy settings.
 
 | Group Policy Setting | Constant Name |
 |----------------------|---------------|
