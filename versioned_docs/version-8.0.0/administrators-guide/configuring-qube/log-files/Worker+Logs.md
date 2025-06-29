@@ -6,10 +6,10 @@ sidebar_position: 3
 
 The Worker outputs log information to a file called workerlog. By default, the file is located in:
 
-| OS            | Path                                 |
-|---------------|--------------------------------------|
-| Linux / macOS | /var/log/supelog                     |
-| Windows       | C:\ProgramData\pfx\qube\logs\supelog |
+| OS            | Path                                   |
+|---------------|----------------------------------------|
+| Linux / macOS | /var/log/workerlog                     |
+| Windows       | C:\ProgramData\pfx\qube\logs\workerlog |
 
 :::tip Linux Note
 Under Linux, the logs are periodically rolled over by an installed crontab script.
@@ -17,7 +17,7 @@ Under Linux, the logs are periodically rolled over by an installed crontab scrip
 
 ## Setting the location of the Worker log file
 
-1 .Modify the following setting in the Worker qb.conf or qbwrk.conf file on the Supervisor:\
+1. Modify the following setting in the Worker qb.conf or qbwrk.conf file on the Supervisor:\
 &emsp;[worker_logfile](../../configuration-parameter-reference/worker_logfile) = logfile_path \
 &emsp;where logfile is the path to the worker log file.
 

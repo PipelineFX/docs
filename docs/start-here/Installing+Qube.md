@@ -33,7 +33,7 @@ steps.
 ## Before You Begin
 
 -   The installer is designed to be run on a machine with a working
-    internet connection, and we suggest saving the downloaded components
+    internet connection, and we suggest saving the downloaded components
     to a network drive.
 
 -   You must have administration privileges to install the software.
@@ -62,7 +62,7 @@ Qube! Installer.
 
 ## Linux Prerequisites
 
-On linux, several packages must be present before Qube! can be installed,
+On Linux, several packages must be present before Qube! can be installed,
 and some pre-configuration is needed.
 
 :::info
@@ -157,7 +157,7 @@ Alternatively, you can continue with Qube! administration tasks. The Administrat
 
 ## Download the Install Wizard {#download-wizard}
 
-The Qube! Install Wizard can be [downladed](https://www.pipelinefx.com/downloadversions/) from the PipelineFX website.
+The Qube! Install Wizard can be [downloaded](https://www.pipelinefx.com/downloadversions/) from the PipelineFX website.
 
 ## Launch the Install Wizard {#launch-wizard}
 
