@@ -27,7 +27,7 @@ INFO: successfully enabled all required privileges
 ```
 
 :::warning
-A worker running in [Desktop User mode](./Service+Mode+vs+Desktop+User+Mode#desktop-user-mode) will log errors in the workerlog when trying to enable the above user rights, but these are not needed by the DU mode worker and can be ignored.
+A worker running in [Desktop User mode](./Service+Mode+vs+Desktop+User+Mode#desktop-user-mode) may log errors in the workerlog when trying to enable the above user rights, but these are not needed by the DU mode worker and can be ignored.
 
 ```
 QbWorker::enableRequiredPrivileges(): enabling required privileges for this process
