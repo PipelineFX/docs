@@ -1,6 +1,6 @@
 ---
 title: System Requirements 
-sidebar_position: 7
+sidebar_position: 6
 ---
 
 # System Requirements 
@@ -13,7 +13,7 @@ If you are having installation or usage problems, make sure these items are pres
 -	Hostname resolution (DNS) working properly on all computers.
 -	Authentication infrastructure installed and working:
 	-	NIS / YP / LDAP for Linux
-	-	OpenDirectory for macOS
+	-	OpenDirectory for OS X
 	-	ActiveDirectory for Windows
 -	Network filesystem reachable by Client and Worker machines. Alternatively if no authentication infrastructure is in place please ensure open read and write privileges are set.
 -	All applications (Maya, AfterEffects, etc) already installed on the clients and workers and licensed.

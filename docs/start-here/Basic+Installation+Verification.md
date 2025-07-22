@@ -1,6 +1,6 @@
 ---
 title: Basic Installation Verification
-sidebar_position: 5
+sidebar_position: 4
 ---
 
 # Basic Installation Verification
@@ -14,7 +14,7 @@ the UI title bar:
 ![image](img/57ea86e886b845247fc24ae9422575fd8179b97b.png)
 
 If you see 0 licenses you will need to install the licenses on the
-supervisor. See if you have a license key to install.
+supervisor. See  if you have a license key to install.
 
 ### Test the supervisor connectivity
 
@@ -35,7 +35,7 @@ requests.
 The simplest test possible is to submit a job that simply runs the
 "set" command, which does nothing but print out the operating
 system's environment variables. You can see what it's expected to do
-by opening a cmd prompt on Windows or a Terminal on macOS and simply
+by opening a cmd prompt on Windows or a Terminal on OS X and simply
 typing `set` and hitting \<`Enter`\>.
 
 Start the Qube! UI, and select the Submit-\>Tests-\>Test 'set' job
