@@ -43,7 +43,7 @@ appended to the job's `callback` list.
 
 Using the "qube" callback language
 
-```perl title="qube" showLineNumbers
+```py title="qube" showLineNumbers
 frameRange = '1-10'
  
 jobA = {
@@ -98,12 +98,12 @@ jobB = {
 cbCode = 'jobId = qb.jobid()\n'
 cbCode += 'qb.unblock(jobId)\n'
  
-callbacks = [
-    {
+callbacks = [{
         'triggers': 'complete-job-ribgenLabel',
         'language': 'python',
         'code': cbCode
-}
+	         }]
+
 jobB['callbacks'] = callbacks
  
 qb.submit( [jobA, jobB] )
@@ -111,7 +111,7 @@ qb.submit( [jobA, jobB] )
 
 ### Each frame in JobB waits for the its corresponding frame in jobA to complete
 
-```perl title="qube" showLineNumbers
+```py title="qube" showLineNumbers
 frameRange = '1-10'
  
 jobA = {
@@ -145,7 +145,7 @@ for work in jobB['agenda']:
             'code': 'unblock-work-self',
         }
     )
-]
+
 jobB['callbacks'] = callbacks
  
 qb.submit( [jobA, jobB] )
@@ -181,7 +181,7 @@ for work in jobB['agenda']:
             'code': cbCode,
         }
     )
-]
+
 jobB['callbacks'] = callbacks
  
 qb.submit( [jobA, jobB] )
@@ -232,7 +232,7 @@ for work in jobC['agenda']:
             'code': cbCode,
         }
     )
-]
+
 jobB['callbacks'] = callbacks
  
 qb.submit( [jobA, jobB, jobC] )
@@ -293,10 +293,9 @@ for work in jobD['agenda']:
             'code': cbCode,
         }
     )
-]
+
 jobB['callbacks'] = callbacks
  
 qb.submit( [jobA, jobB, jobC, jobD] )
 ```
-
 
