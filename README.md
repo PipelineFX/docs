@@ -5,7 +5,7 @@
 
 # Introduction
 
-This is PipeineFX's repository for Qube! user documentation.
+This is PipelineFX's repository for Qube! user documentation.
 
 Our updated documentation is built using [Docusaurus 3.7.0](https://docusaurus.io/) - an advanced static-site generator.
 
