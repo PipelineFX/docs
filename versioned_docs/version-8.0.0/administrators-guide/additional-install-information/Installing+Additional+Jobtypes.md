@@ -4,7 +4,7 @@ sidebar_position: 6
 
 # Installing Additional JobTypes
 
-Some of the application interfaces construct a command-line that is then run directly on the Workers and do not require any additional installation. Other application interfaces (like Maya, 3dsMax, and XSI) are controlled via (perl or python) scripts. These scripts are installed on the Worker by installing the desired jobtypes.  
+Some of the application interfaces construct a command-line that is then run directly on the Workers and do not require any additional installation. Other application interfaces (like Maya, 3dsMax, and Nuke) are controlled via (perl or python) scripts. These scripts are installed on the Worker by installing the desired jobtypes.  
 
 The application interfaces with these back-end scripts need to be installed on the Workers. Similarly, there are a few jobtypes that also have front-end scripts to provide in-application submission that should be installed on the Client machines. 
 
