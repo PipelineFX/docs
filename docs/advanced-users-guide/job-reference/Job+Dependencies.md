@@ -24,7 +24,7 @@ Using the --waitfor option with qbsub is by far the easier of the two approaches
 2. Collect the job ID, say 123
 3. Submit the dependent job with qbsub --waitfor 123
 4. Collect the job ID if more dependent jobs are required
-5. This can also be accomplished using the job dependency field feature. A job will wait until the specified condition is reached. The format of the dependency field is exactly the format used in the callback trigger field (See Triggers **need link**)
+5. This can also be accomplished using the job dependency field feature. A job will wait until the specified condition is reached. The format of the dependency field is exactly the format used in the callback [Trigger](/triggers) field.
 
 **What happens**
 The first job is submitted normally. If the second job is submitted with a --waitfor option, it will be submitted in the blocked state. When the first job finishes, it will unblock and run.

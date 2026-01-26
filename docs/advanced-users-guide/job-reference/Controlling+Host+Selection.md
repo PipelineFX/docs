@@ -16,14 +16,14 @@ Restrictions are used to allow or restrict where jobs run, and are applied to bo
 When a job has a restriction defined, it means only run on hosts that satisfy the restriction expression. Hosts that don't satisfy the restriction expression won't be considered as dispatch candidates (the job will never be sent to that Worker).
 
 ### Restrictions defined for Workers
-When a Worker has a restriction defined via its worker_restrictions **need link** value, it means only run jobs whose cluster value matches one of the clusters in that worker's restriction expression.  The worker won't accept jobs whose cluster doesn't match one of the clusters in the worker's restriction expression.
+When a Worker has a restriction defined via its [worker_restrictions](../../administrators-guide/configuration-parameter-reference/worker_restrictions) value, it means only run jobs whose cluster value matches one of the clusters in that worker's restriction expression.  The worker won't accept jobs whose cluster doesn't match one of the clusters in the worker's restriction expression.
 
 ### Restrictions Syntax
 A restriction is really defined as a "filter" for hosts based upon information in the queuing algorithm; the values are one or more cluster names. In the priority/cluster queuing system, a user specifies the restrictions with a directory structure format:
 
 /[\<segment>/][\<segment>/][+|\*]
 
--	means only the first level below.
+-	\* means only the first level below.
 -	\+ means all levels below that level, regardless of depth in the hierarchy.
 
 :::info
@@ -60,7 +60,7 @@ Qube! allows the administrator to organize the farm into clusters or host groups
 
 | Command | Meaning |
 | ---     | ---     |
-| % qbsub --groups "vfx,character" Render my/file.ma | Render the Maya file called file.ma on any host in the 'vfx' or 'character' groups |
+| % qbsub --groups "vfx,character" Render my/file.ma | Render the Maya file called file.ma on any host in the 'vfx' or 'character' groups |
 | % qbsub --omitgroups "vfx,character" command | Run 'command' on any host not in the 'vfx' or 'character' groups |
  
 
@@ -85,15 +85,19 @@ The + or -  in the expression is used to determine if the job would prefer the l
 | % qbsub --hostorder "-host.processors.used" Render myscene.ma | Choose the host with the least number of worker slots in use |
 | % qbsub --hostorder "host.processor_speed,host.processors.avail"| Render myscene.ma	Choose the fastest host with the most available worker_slots |
 
-## Notes
+<br/>
+
+:::note
+
 The system will use the hostorder specification only when initially
 choosing the most preferable Worker for the job itself. Once it has
 chosen a host, it will try to fill it up with instances from the job
 until the host is full. In other words, the system will *not* attempt
 to apply the hostorder to select a host for each individual instance.
 
-## See Also
--	supervisor_default_hostorder
--	worker_cluster
+:::
 
-**need links**
+## See Also
+- [supervisor_default_hostorder](../../administrators-guide/configuration-parameter-reference/supervisor_default_hostorder)
+- [worker_cluster](../../administrators-guide/configuration-parameter-reference/worker_cluster)
+

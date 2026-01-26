@@ -7,7 +7,7 @@ sidebar_position: 10
 Jobs can be set up to automatically e-mail the job's owner when the job has completed. This is enabled on a per-job basis. It is also possible to send e-mail to any other address. This is specified in the job's address field. Emails are sent from the Supervisor, so it must have that ability enabled.
 
 ## Configuration
-Email is configured via variables in the qb.conf file, specifically: **need links**
+Email is configured via variables in the qb.conf file, specifically:
 
 | Variable | Controls |
 | ---      | ---      |
@@ -28,4 +28,15 @@ It is also possible to specify email recipients from the command line:
 | ---     | ---     |
 | % qbsub --flags mail ls	| E-mail job owner when the job is done. |
 | % qbsub --flags mail --address anon@server.com ls	| Email a specific address |
+
+## See Also
+- [mail_administrator](../../administrators-guide/configuration-parameter-reference/mail_administrator)
+- [mail_domain](../../administrators-guide/configuration-parameter-reference/mail_domain)
+- [mail_from](../../administrators-guide/configuration-parameter-reference/mail_from)
+- [mail_host](../../administrators-guide/configuration-parameter-reference/mail_host)
+- [mail_job_status_format](../../administrators-guide/configuration-parameter-reference/mail_job_status_format)
+- [mail_license_status_format](../../administrators-guide/configuration-parameter-reference/mail_license_status_format)
+- [mail_port](../../administrators-guide/configuration-parameter-reference/mail_port)
+- [mail_subjob_status_format](../../administrators-guide/configuration-parameter-reference/mail_subjob_status_format)
+- [mail_work_status_format](../../administrators-guide/configuration-parameter-reference/mail_work_status_format)
 

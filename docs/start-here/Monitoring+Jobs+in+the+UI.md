@@ -81,7 +81,7 @@ The contents of that menu depend on the entity you clicked. For
 example, jobs will have a different list of menu items than will frames
 or workers. The menu items are dictated by plugins which can be created
 or modified. A more detailed description of the creation or
-modification of plugins can be found in Adding Custom Plugins **need link**.
+modification of plugins can be found in [Customizing the Qube UI](../developers-guide/customizing-the-qube-ui/customizing-the-qube-ui).
 
 As of version 7.5-0, the list of available actions are as follows:
 

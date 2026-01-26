@@ -113,6 +113,6 @@ The possible operands for a job.type are:
 | "maya" in host.jobtypes	| Run the job on a host with the Maya job type |
 | host.processors.total == 2	| Run my job only on dual processor hosts |
 | not (job.id in host.duty.id)	| Run my job only if there isn't already one of this job's instances running on it |
-| job.kind = 'test' (or any other value, your choice...)<br/>not(job.kind in host.duty.kind)<br/><br/>(Also see How to restrict a host to only one instance of a given kind of job, but still allow other jobs)<br/>**need link** | Run only one "kind" of job on a worker at the same time \ (this will allow other kinds of jobs still to run, different from reserving all job slots) |
+| job.kind = 'test' (or any other value, your choice...)<br/>not(job.kind in host.duty.kind)<br/><br/>(Also see [How to restrict a host to only one instance of a given kind of job, but still allow other jobs](../../knowledge-base/tips-tricks/Job-Submission/How+to+restrict+a+host+to+only+one+instance+of+a+given+kind+of+job+but+still+allow+other+jobs))<br/> | Run only one "kind" of job on a worker at the same time \ (this will allow other kinds of jobs still to run, different from reserving all job slots) |
 
 

@@ -58,8 +58,6 @@ copies of the application, but no more than 'Max Instances'. The
 default of -1 means there is no maximum. If this is set to 0, then it
 won't spawn more than 'Instances' copies.
 
-More on Instances & Reservations & SmartShare Studio Defaults **need links**
-
 **Threads per instance**
 Number of threads requested per instances.
 
@@ -67,7 +65,7 @@ Number of threads requested per instances.
 This checkbox sets the instances to request all cores on a worker.
 
 **Range**
-Frame range for the job (e.g 1-100, or 1-100x3, or 1,3,7,10). Most jobs
+Frame range for the job (e.g 1-100, or 1-100x3, or 1,3,7,10). Most jobs
 require a frame range to execute on the Workers. You can set this range
 in a few different ways :
 
@@ -80,7 +78,7 @@ in a few different ways :
 
 **Range Execution Order**
 Order to render the items.
-(Ascending=1,2,3,4,5\...,Descending=10,9,8\...,Binary=first,middle,last\...) You
+(Ascending=1,2,3,4,5\...,Descending=10,9,8\...,Binary=first,middle,last\...) You
 can set the order in which your frames are rendered. The drop down
 options are:
 
@@ -96,7 +94,7 @@ options are:
     frames in the sequence to make sure it is rendering correctly.
 
 **Retries**
-Number of times to retry a failed frame/job instance. The default value
+Number of times to retry a failed frame/job instance. The default value
 of -1 means don't retry.
 
 **Retry Delay**
@@ -268,13 +266,13 @@ Examples
 
 ------------------------------------------------------------------------------
 
-**See Also** **need links**
+**See Also**
 
-- Controlling Host Selection
-- How to use qbwrk.conf
-- worker_groups
-- worker_cluster
-- How to use clustering for workers
+- [Controlling Host Selection](../../../advanced-users-guide/job-reference/Controlling+Host+Selection)
+- [How to use clustering for workers](../../../knowledge-base/how-to/How+to+use+clustering+for+workers)
+- [How to use qbwrk.conf](../../../knowledge-base/how-to/How+to+use+qbwrk.conf)
+- [worker_groups](../../../administrators-guide/configuration-parameter-reference/worker_groups)
+- [worker_cluster](../../../administrators-guide/configuration-parameter-reference/worker_cluster)
 
 </details>
 
@@ -327,14 +325,14 @@ labels.
 Arbitrary typing information that can be used to identify the job. It
 is commonly used to make sure only one of this "kind" of job runs on a
 worker at the same time by setting the job's requirements to include
-"not (job.kind in host.duty.kind)". See How to restrict a host to only
-one instance of a given kind of job, but still allow other jobs **need link** 
+"not (job.kind in host.duty.kind)". See [How to restrict a host to only
+one instance of a given kind of job, but still allow other jobs](../../../knowledge-base/tips-tricks/Job-Submission/How+to+restrict+a+host+to+only+one+instance+of+a+given+kind+of+job+but+still+allow+other+jobs)
 
 **Process Group**
 
 Job Process Group for logically organizing dependent jobs. Defaults to
 the jobid. Combination of "label" and "Process Group" must be unique
-for a job. See Process group labels **need link**
+for a job. See [Process group labels](../../../developers-guide/callbacks/triggers/trigger-event-syntax/Process+group+labels)
 
 **Instance Timeout**
 
@@ -365,7 +363,7 @@ another user to submit their jobs as.
 
 </summary>
 
-Job Tags are explained in detail on the Job Tags page. **need link**
+Job Tags are explained in detail on the [Job Tags](../../../advanced-users-guide/job-reference/Job+Tags) page.
 
 </details>
 
@@ -463,11 +461,18 @@ for creating tags for your job.
 You can add entries by typing in the drop-down window or select already
 created accounts from the drop-down.
 
-See also Qube! Job Tags **need link**
+:::note
 
-**Notes**
 Freeform text for making notes on this job. Add text about the job for
 future reference. Viewable in QubeUI.
 
+:::
+
 </details>
+
+## See also
+
+* [Job Tags](../../../advanced-users-guide/job-reference/Job+Tags)
+* [Reservations](../../../advanced-users-guide/job-reference/Job+Reservations)
+* [SmartShare](../../../administrators-guide/configuring-qube/SmartShare)
 

@@ -33,7 +33,7 @@ directory, drive mapping or meta data provided on submission.
 
 ### Job Callbacks tab
 
-The Job Callbacks tab shows, well, the job callbacks **need link**.
+The Job Callbacks tab shows a text representation of any job [callbacks](/callbacks).
 ![image](img/2e55bbc2cded00763003836582ce1e676b507317.png)
 
 ### Job History tab

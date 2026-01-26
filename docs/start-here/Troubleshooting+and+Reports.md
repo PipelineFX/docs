@@ -15,7 +15,7 @@ The documentation you are reading is searchable, and that may be the quickest wa
 
 The Knowledge Base provides a list of answers to common questions posed by customers. It is indexed and can be searched as a single webpage.
 
--	Knowledge Base **need link**
+-	[Knowledge Base](/knowledge-base)
 
 ## Forum
 
