@@ -41,13 +41,19 @@ proxy_execution_mode = user
 :::warning Important - Windows Only
 When a Worker is in **User mode**, all users wishing to execute jobs on **Windows** hosts will need to register their passwords with the Supervisor.  If this is not done, jobs will fail with a **"badlogin"** error.
 
+<!--
 Registering a user's Windows password can be done from QubeUI, using the menu item "Administration->Register Windows Password", or by using the qblogin command:
+-->
+
+Registering a user's Windows password can be done by using the qblogin command:
 
 ```
-qblogin [user]
+qblogin <user>
 ```
 
-where user is an optional user name, otherwise the current user is assumed. When executed qblogin will prompt for a password twice for verification. The encrypted password is stored with the Supervisor, which transmits it to the Worker each time it tries to run a job on a Windows host.
+where user is an optional user name, otherwise the current user is assumed.
+
+When executed qblogin will prompt for a password twice for verification. The encrypted password is stored with the Supervisor, which transmits it to the Worker each time it tries to run a job on a Windows host.
 
 If a user password is changed, the user will need to run qblogin again to update the password with the Supervisor. If the password turns out to be incorrect, the job will will go into the **badlogin** state. A job in the badlogin state will need to be resubmitted after the password is updated in the Supervisor. If the [enforce_password](../../configuration-parameter-reference/supervisor_flags) flag is set in the Supervisor, the user will not be able to submit jobs until the password is updated.
 :::
