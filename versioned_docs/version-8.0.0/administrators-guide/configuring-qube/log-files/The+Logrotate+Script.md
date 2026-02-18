@@ -2,7 +2,7 @@
 sidebar_position: 6
 ---
 
-# Log logrotate.py Script
+# Logrotate.py Script
 
 ## Location
 
