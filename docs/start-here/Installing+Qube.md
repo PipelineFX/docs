@@ -32,33 +32,137 @@ steps.
 
 ## Before You Begin
 
--   The installer is designed to be run on a machine with a working
-    internet connection, and we suggest saving the downloaded components
-    to a network drive.
+### Here is a list of points to consider before starting a Qube! installation
 
--   You must have administration privileges to install the software.
+-	All computers with OS installed, licensed, and networked.
 
-    -   For Windows users, you may want to right-click \> "Run
-        as Administrator" or just log in as the Administrator.
+-	Hostname resolution (DNS) working properly on all computers.
 
-    -   For Linux users, you must run as root or a sudoer.
+-	Authentication infrastructure installed and working
 
-    -   macOS users will be prompted to enter an admin password before
-        installation begins.
+	-	NIS / YP / LDAP for Linux
+	-	OpenDirectory for macOS
+	-	ActiveDirectory for Windows.
 
--   Once components have been downloaded, the installer can be run again
-    on other machines without accessing the internet by pointing it to
-    the download location used by the previous install session.
+-	Network file system reachable by Client and Worker machines
 
-Python3 Required!
+	-	While not strictly necessary, the Supervisor can also benefit from
+access to the network file system to allow
+[Writing Job Logs to a Network Filesystem](/administrators-guide/configuring-qube/log-files/Writing+Job+Logs+to+a+Network+Filesystem)
 
-:::tip
+-	All applications (Maya, AfterEffects, etc) already installed on the clients
+and workers and licensed.
 
-Python3 (3.6 to 3.8) is a prerequisite now for all installations.
-You need to have it installed on each system, prior to running the
-Qube! Installer.
+-	Ability to remote login to all machines, either via Remote Desktop, SSH, or
+another tool.
+
+-	Ideally a Qube! Local repository has been pre-populated for all operating systems
+that will need to be installed. Please watch [this](https://www.youtube.com/watch?v=omXmP7yyDtk)
+YouTube video on how this is done.
+
+-	Appropriate versions of [Python and Perl](/administrators-guide/additional-install-information/Python+and+Perl+Installation)
+are installed on the supervisor and workers.
+
+:::warning[Installation Alert]
+
+Python3 (3.6 to 3.10) is a prerequisite for all installations. It should be
+installed on each system prior to running the Qube! Installer.
 
 :::
+
+-	Supervisor must have a consistent IP address, either via a static IP address
+or DHCP reservation.
+
+-	If a network account is to be used for the worker [proxy_account](/administrators-guide/configuration-parameter-reference/proxy_account),
+this account should already have been created and granted permission to the shared file system.
+
+-   You must have administration privileges to install the software.
+    -   For Windows users, you may want to right-click \> "Run
+        as Administrator" or just log in as the Administrator.
+    -   For Linux users, you must run as root or a sudoer.
+    -   macOS users will be prompted to enter an admin password before
+        installation begins.
+
+### Ensure shared file storage
+
+Qube! was designed to work with render farms utilizing shared file storage. While it is possible
+to write job submissions that collect and copy data to individual workers before rendering,
+this is not part of Qube's core functionality.
+
+#### Considerations for new render farms:
+
+-	What do you use for shared file storage?
+-	How are permissions managed for this filesystem?
+-	Is the file system world-writeable, or are permissions granted on a per-user basis?
+
+### Determine job execution mode
+
+The Qube! worker can run either as a daemon (a "system service" on Windows), or a user
+process. When it runs as a user process, it's said to be running in Desktop User (DU) mode.
+When it runs as a daemon, it's said to be running in Service mode.
+
+#### Desktop User (DU) mode
+
+-	The worker process is started by a logged in user, usually when that user logs in, and is
+killed when the user logs out
+-	The worker process is owned by the logged in user
+-	The worker process does not re-authenticate, and all jobs are run by the user who owns
+the worker process
+-	The worker process has full access to the screenspace
+
+:::info
+
+Desktop User mode is the default option for new installations
+
+:::
+
+#### Service mode
+
+-	The worker process is usually started at system boot time and runs as long as the
+system is up
+-	The worker process runs as either a Windows service or a daemon owned by the root
+user on macOS and Linux.
+-	The worker process will run jobs under a user other than root or the system service. This
+user is determined by the proxy_execution_mode value:
+-	proxy_execution_mode = proxy
+	-	means it will always authenticate as the user defined in proxy_account.
+-	proxy_execution_mode = user
+	-	means it will always authenticate as the user who submitted the job.
+
+In Service mode the worker process will be unable to access screenspace on Windows and macOS; no
+processes will be able to render to a hardware buffer, applications that can only run by
+displaying their full GUI will usually not be able to start, etc..
+
+:::info
+
+For Nvidia GPUs to be accessible to Windows workers running in Service mode the GPUs must be
+from the RTX PRO/Quadro lines of professional cards running Tesla Compute Cluster (TCC) drivers.
+To access GeForce GPUs running WDDC drivers the worker must be in DU mode.
+
+:::
+
+
+### Proxy user account (if applicable)
+
+If the execution_mode is to be "Proxy", then it remains to be determined whether to use a proxy
+account on the local machine or a network account.
+The default behavior is to use a local proxy user account; a local account named "qubeproxy" is
+automatically created during the worker installation process. If it is necessary to use a network
+or ActiveDirectory account for the proxy user:
+
+#### Windows
+
+It's simple to use an ActiveDirectory account for the proxy account. Simply create a user
+account in the ActiveDirectory that is NOT named "qubeproxy" (to avoid confusion with the local
+proxy account). This allows the proxy account to be present in any ACL�s (Access Control
+Lists) for the filesystem permissions.
+
+#### macOS
+
+If the proxy account is to be a network account, the proxy user's home directory should be local
+on all machines, or mounted by NFS at startup. If the home directory is mounted at login via
+AFP or SMB, Qube! won't be able to use this account since the proxy user never actually "logs
+in". In this case, the execution_mode will have to be set to Desktop user mode.
 
 ## Linux Prerequisites
 
@@ -67,8 +171,8 @@ and some pre-configuration is needed.
 
 :::info
 
-Install whatever version **yum** will find in the base repository for
-your version of CentOS/RHEL
+Install whatever version **yum/dnf** will find in the base repository for
+your version of Rocky/CentOS/RHEL.
 
 :::
 
@@ -139,7 +243,7 @@ Follow these steps:
 4. [Install a Worker & Client](#install-worker-client)
 5. [Submit Test Jobs](#submit-test-jobs)
 
-That's it! After you've got this far, you [submit jobs](../category/submitting-jobs-1) can for hero applications
+That's it! After you've got this far, you can [submit jobs](../category/submitting-jobs-1) for hero applications
 such as Maya, 3dsMax, Nuke, and many others.
 
 <!--
@@ -150,10 +254,9 @@ This is a normal sentence, and <span style={{ fontSize: '24px' }}>**this part is
 
 Alternatively, you can continue with Qube! administration tasks. The Administrator's Guide explains how to keep building up your Qube! installation, including:
 
-- Installing Licenses
-- Adding Additional Workers
-- Adding Additional Clients
-- Tuning Qube! for Optimal Performance
+- [Additional Installation Information](/additional-install-information)
+- [Managing Qube](/managing-qube)
+- [Configuration Parameter Reference](/configuration-parameter-reference)
 
 ## Download the Install Wizard {#download-wizard}
 
