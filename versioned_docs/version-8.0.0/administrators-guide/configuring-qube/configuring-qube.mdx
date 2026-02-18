@@ -5,22 +5,20 @@ slug: /configuring-qube
 # Configuring Qube!
 
 ## Contents
-- Clustering and Job Priority
-- Supervisor Configuration
-- SmartShare
-- Worker Configuration
-- Client Configuration
-- Permissions
-- Auto-Wrangling
-- Job Preemption
-- Log Files
-- Per-User and Per-Pgrp Instance Limits
-- System-Wide Resource Tracking
-- Flight-Checks (Pre and Post)
-- Universal Callbacks
-- Queuing Algorithms
-- Lights Out Management (LOM)
-- Shotgun Integration
+- [Clustering and Job Priority](/administrators-guide/configuring-qube/Clustering+and+Job+Priority)
+- [Supervisor Configuration](/administrators-guide/configuring-qube/Supervisor+Configuration)
+- [SmartShare](/administrators-guide/configuring-qube/SmartShare)
+- [Worker Configuration](/worker-configuration)
+- [Client Configuration](/administrators-guide/configuring-qube/Client+Configuration)
+- [Permissions](/administrators-guide/configuring-qube/Permissions)
+- [Auto-Wrangling](/administrators-guide/configuring-qube/Auto-Wrangling)
+- [Job Preemption](/administrators-guide/configuring-qube/Job+Preemption)
+- [Log Files](/log-files)
+- [Per-User and Per-Pgrp Instance Limits](/administrators-guide/configuring-qube/Per-User+and+Per-Pgrp+Instance+Limits)
+- [System-Wide Resource Tracking](/system-wide-resource-tracking)
+- [Flight-Checks (Pre and Post)](/administrators-guide/configuring-qube/Flight-Checks)
+- [Universal Callbacks](/administrators-guide/configuring-qube/Universal+Callbacks)
+- [Queuing Algorithms](/queuing-algorithms)
 
 ## Configuration Files
 The Qube! configuration files allow you to specify the settings for the Qube! Supervisor, Workers, and Clients. These files are located in the following directories depending on the platform:
@@ -39,7 +37,8 @@ The qb.lic file must contain a license key string issued by PipelineFX. Addition
 **qbwrk.conf** (Supervisor only)
 The qbwrk.conf file is an optional file on the Supervisor that centrally configures all of the Qube! Workers under the Supervisor. See the section on "Centrally Configuring Workers" for more information.
 
-Configuration Dialog
+## Configuration Dialog
+
 The Configuration dialog, launched from the QubeUI\'s "Administration->Configure (local)", allows one to configure the local machine for Qube! It exposes all of the options that the standalone Configuration GUI exposed and more. For centralized Worker configuration, see the Host Layout\'s popup menu item "Configure" when logged into the Supervisor.
 
 :::tip
