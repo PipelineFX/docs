@@ -13,13 +13,35 @@ If you are having installation or usage problems, make sure these items are pres
 -	Hostname resolution (DNS) working properly on all computers.
 -	Authentication infrastructure installed and working:
 	-	NIS / YP / LDAP for Linux
-	-	OpenDirectory for OS X
+	-	OpenDirectory for macOS
 	-	ActiveDirectory for Windows
 -	Network filesystem reachable by Client and Worker machines. Alternatively if no authentication infrastructure is in place please ensure open read and write privileges are set.
--	All applications (Maya, AfterEffects, etc) already installed on the clients and workers and licensed.
--	Python and Perl are installed if using separate jobtypes. You can obtain installers for those languages here: http://www.python.org and http://www.perl.org See this page for details.
--	All necessary Qube! installers already downloaded and on a filesystem accessible by all machines.
--	If a network account is to be used for the proxy user account, this account should already have been created and granted permission to the shared file system.
+	-	While not strictly necessary, the Supervisor can also benefit from
+access to the network file system to allow
+[Writing Job Logs to a Network Filesystem](/administrators-guide/configuring-qube/log-files/Writing+Job+Logs+to+a+Network+Filesystem)
+-	All applications (Maya, AfterEffects, etc.) already installed on the clients and workers and licensed.
+-	Appropriate versions of [Python and Perl](/administrators-guide/additional-install-information/Python+and+Perl+Installation)
+are installed on the supervisor and workers.
+
+:::warning[Installation Alert]
+Python3 (3.6 to 3.10) is a prerequisite for all installations. It should be
+installed on each system prior to running the Qube! Installer.
+:::
+
+-	Ideally a Qube! Local repository has been pre-populated for all operating systems
+that will need to be installed. Please watch [this](https://www.youtube.com/watch?v=omXmP7yyDtk)
+YouTube video on how this is done.
+-	If a network account is to be used for the worker [proxy_account](/administrators-guide/configuration-parameter-reference/proxy_account),
+this account should already have been created and granted permission to the shared file system.
+
+-   You must have administration privileges to install the software.
+    -   For Windows users, you may want to right-click \> "Run
+        as Administrator" or just log in as the Administrator.
+    -   For Linux users, you must run as root or a sudoer.
+    -   macOS users will be prompted to enter an admin password before
+        installation begins.
+-	Supervisor must have a consistent IP address, either via a static IP address
+or DHCP reservation.
 -	Current Qube! Supervisor license issued for the correct MAC address.
 
 ## Supervisor Specifications

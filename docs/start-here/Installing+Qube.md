@@ -32,57 +32,6 @@ steps.
 
 ## Before You Begin
 
-### Here is a list of points to consider before starting a Qube! installation
-
--	All computers with OS installed, licensed, and networked.
-
--	Hostname resolution (DNS) working properly on all computers.
-
--	Authentication infrastructure installed and working
-
-	-	NIS / YP / LDAP for Linux
-	-	OpenDirectory for macOS
-	-	ActiveDirectory for Windows.
-
--	Network file system reachable by Client and Worker machines
-
-	-	While not strictly necessary, the Supervisor can also benefit from
-access to the network file system to allow
-[Writing Job Logs to a Network Filesystem](/administrators-guide/configuring-qube/log-files/Writing+Job+Logs+to+a+Network+Filesystem)
-
--	All applications (Maya, AfterEffects, etc) already installed on the clients
-and workers and licensed.
-
--	Ability to remote login to all machines, either via Remote Desktop, SSH, or
-another tool.
-
--	Ideally a Qube! Local repository has been pre-populated for all operating systems
-that will need to be installed. Please watch [this](https://www.youtube.com/watch?v=omXmP7yyDtk)
-YouTube video on how this is done.
-
--	Appropriate versions of [Python and Perl](/administrators-guide/additional-install-information/Python+and+Perl+Installation)
-are installed on the supervisor and workers.
-
-:::warning[Installation Alert]
-
-Python3 (3.6 to 3.10) is a prerequisite for all installations. It should be
-installed on each system prior to running the Qube! Installer.
-
-:::
-
--	Supervisor must have a consistent IP address, either via a static IP address
-or DHCP reservation.
-
--	If a network account is to be used for the worker [proxy_account](/administrators-guide/configuration-parameter-reference/proxy_account),
-this account should already have been created and granted permission to the shared file system.
-
--   You must have administration privileges to install the software.
-    -   For Windows users, you may want to right-click \> "Run
-        as Administrator" or just log in as the Administrator.
-    -   For Linux users, you must run as root or a sudoer.
-    -   macOS users will be prompted to enter an admin password before
-        installation begins.
-
 ### Ensure shared file storage
 
 Qube! was designed to work with render farms utilizing shared file storage. While it is possible
