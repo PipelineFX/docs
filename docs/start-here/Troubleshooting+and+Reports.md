@@ -1,6 +1,6 @@
 ---
 title: Troubleshooting and Reporting 
-sidebar_position: 5
+sidebar_position: 6
 ---
 
 # Troubleshooting and Reporting 

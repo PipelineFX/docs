@@ -1,6 +1,6 @@
 ---
 title: Monitoring Jobs in the UI
-sidebar_position: 3
+sidebar_position: 4
 ---
 
 # Monitoring Jobs in the UI
