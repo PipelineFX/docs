@@ -41,11 +41,7 @@ proxy_execution_mode = user
 :::warning Important - Windows Only
 When a Worker is in **User mode**, all users wishing to execute jobs on **Windows** hosts will need to register their passwords with the Supervisor.  If this is not done, jobs will fail with a **"badlogin"** error.
 
-<!--
-Registering a user's Windows password can be done from QubeUI, using the menu item "Administration->Register Windows Password", or by using the qblogin command:
--->
-
-Registering a user's Windows password can be done by using the qblogin command:
+Registering a user's Windows password can be done from QubeUI, using the menu item "File &rarr; Set Windows password", or by using the qblogin command:
 
 ```
 qblogin <user>
