@@ -153,7 +153,7 @@ sidebar_position: 13
 **Example**
 
 ```python
-JobTallyValidator.validate(job['cpustally'])
+qb.JobTallyValidator.validate(job['cpustally'])
 ```
 
 ---
@@ -336,8 +336,8 @@ qb.binarySort([1,2,3,4,5,6,7,8,9,10])
 **Example**
 
 ```python
-blockwork('250:0')
-blockwork('250:0', '250:1')
+qb.blockwork('250:0')
+qb.blockwork('250:0', '250:1')
 ```
 
 ---
@@ -805,8 +805,8 @@ qb.kill('250.0')    # kill only subjob 250.0
 **Example**
 
 ```python
-killwork('250:0')
-killwork('250:0', '250:1')
+qb.killwork('250:0')
+qb.killwork('250:0', '250:1')
 ```
 
 ---
@@ -1024,9 +1024,9 @@ loadedJob = qb.recoverjob('c:/myjob.xml')
 **Example**
 
 ```python
-requeuework('250:0')
-retrywork('250:25-29')
-requeuework('250:0', '250:1')
+qb.requeuework('250:0')
+qb.retrywork('250:25-29')
+qb.requeuework('250:0', '250:1')
 ```
 
 ---
@@ -1068,8 +1068,8 @@ qb.retire(250)
 **Example**
 
 ```python
-retirework('250:0')
-retirework('250:0', '250:1')
+qb.retirework('250:0')
+qb.retirework('250:0', '250:1')
 ```
 
 ---
@@ -1095,9 +1095,9 @@ retirework('250:0', '250:1')
 **Example**
 
 ```python
-retrywork('250:0')
-retrywork('250:25-29')
-retrywork('250:0', '250:1')
+qb.retrywork('250:0')
+qb.retrywork('250:25-29')
+qb.retrywork('250:0', '250:1')
 ```
 
 ---
@@ -1348,8 +1348,8 @@ qb.top(260)
 **Example**
 
 ```python
-unblockwork('250:0')
-unblockwork('250:0', '250:1')
+qb.unblockwork('250:0')
+qb.unblockwork('250:0', '250:1')
 ```
 
 ---
